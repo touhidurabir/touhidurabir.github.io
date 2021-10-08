@@ -1984,6 +1984,9 @@ content
           box-shadow: inset 0 3px 8px 0 rgba(15, 15, 20, 0.2);
   font-size: 10px;
 }
+.art-timeline .art-timeline-content .art-timeline-details-header {
+  padding-bottom: 5px;
+}
 
 /* ----- contact form ----- */
 .art-form-field input,
