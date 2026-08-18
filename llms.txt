@@ -28,7 +28,7 @@ Also known online as **touhidurabir**. Not to be confused with the GitHub users
 
 ## Open source
 
-- Touhidur Rahman is a **top 10 all-time contributor to both `pkp/ojs` and
+- Touhidur Rahman is a **top 10 contributor to both `pkp/ojs` and
   `pkp/pkp-lib`**, with just over 1,000 merged commits across the four main PKP
   repositories. Verifiable at
   https://github.com/pkp/ojs/graphs/contributors?all=1 (the `?all=1` matters,

@@ -3005,4 +3005,65 @@ h3 {
   }
 }
 
+/* ----- content tables -----
+   .art-table was built for the narrow sidebar, where space-between reads as
+   two neat columns. Inside a full-width card the label and the value end up
+   at opposite edges of the screen with a lake of nothing between them.
+   .art-table-cols gives them a real label column instead. */
+.art-table-cols ul li {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.art-table-cols ul li h6 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 140px;
+          flex: 0 0 140px;
+  padding-right: 15px;
+}
+
+.art-table-cols ul li span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  text-align: left;
+}
+
+/* project names are links, and the theme greyed them out below the plain
+   text next to them, which inverted the emphasis */
+.art-table-cols ul li h6 a {
+  color: #fafafc;
+}
+
+.art-table-cols ul li h6 a:hover {
+  color: #FFC107;
+}
+
+/* wider label column for the project list, where the labels are domains */
+.art-table-cols-wide ul li h6 {
+  -ms-flex: 0 0 200px;
+      flex: 0 0 200px;
+}
+
+@media (max-width: 575px) {
+  .art-table-cols ul li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .art-table-cols ul li h6,
+  .art-table-cols-wide ul li h6 {
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+    padding-right: 0;
+    margin-bottom: 3px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
