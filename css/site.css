@@ -752,11 +752,11 @@ strong { color: var(--text); font-weight: 600; }
   pointer-events: none;
 }
 .contact h2 {
-  font-size: clamp(2.6rem, 8vw, 6rem);
+  font-size: clamp(2.4rem, 5.5vw, 4rem);
   font-weight: 800;
-  letter-spacing: -0.04em;
-  line-height: 0.95;
-  margin-top: 1rem;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-top: 0.75rem;
 }
 .contact-email {
   display: inline-block;
