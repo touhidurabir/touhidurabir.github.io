@@ -33,6 +33,25 @@ $(function() {
 		continuousScrolling: true,
 	});
 
+	// in-page anchors
+	// The content scrolls inside a Smooth Scrollbar instance, so native anchor
+	// jumps do nothing. Route them through the scrollbar instance instead.
+	$(document).on('click', 'a[href^="#"]:not([href="#."]):not([href="#"])', function(e) {
+		var target = document.querySelector($(this).attr('href'));
+		if (!target) {
+			return;
+		}
+		e.preventDefault();
+		var bar = Scrollbar.get(document.querySelector('#scrollbar'));
+		if (bar) {
+			bar.scrollIntoView(target, { offsetTop: 30 });
+		} else {
+			target.scrollIntoView({ behavior: 'smooth' });
+		}
+		// close the mobile sidebar if it is open
+		$('.art-info-bar').removeClass('art-active');
+	});
+
 	// page loading
 	$(document).ready(function() {
 		anime({
@@ -90,174 +109,17 @@ $(function() {
     complete: function(anim) {
       $('.art-counter').each(function() {
         $(this).prop('Counter', 0).animate({
-          Counter: $(this).text()
+          Counter: $(this).text().replace(/,/g, '')
         }, {
           duration: 2000,
           easing: 'linear',
           step: function(now) {
-            $(this).text(Math.ceil(now));
+            $(this).text(Math.ceil(now).toLocaleString('en-US'));
           }
         });
       });
     }
   });
-
-  // progressbars
-  var bar = new ProgressBar.Circle(circleprog1, {
-    strokeWidth: 7,
-    easing: 'easeInOut',
-    duration: 1400,
-    delay: 2500,
-    trailWidth: 7,
-    step: function(state, circle) {
-      var value = Math.round(circle.value() * 100);
-      if (value === 0) {
-        circle.setText('');
-      } else {
-        circle.setText(value);
-      }
-    }
-  });
-
-  bar.animate(1);
-
-  var bar = new ProgressBar.Circle(circleprog2, {
-    strokeWidth: 7,
-    easing: 'easeInOut',
-    duration: 1400,
-    delay: 2600,
-    trailWidth: 7,
-    step: function(state, circle) {
-      var value = Math.round(circle.value() * 100);
-      if (value === 0) {
-        circle.setText('');
-      } else {
-        circle.setText(value);
-      }
-    }
-  });
-
-  bar.animate(1);
-
-  // var bar = new ProgressBar.Circle(circleprog3, {
-  //   strokeWidth: 7,
-  //   easing: 'easeInOut',
-  //   duration: 1400,
-  //   delay: 2700,
-  //   trailWidth: 7,
-  //   step: function(state, circle) {
-  //     var value = Math.round(circle.value() * 100);
-  //     if (value === 0) {
-  //       circle.setText('');
-  //     } else {
-  //       circle.setText(value);
-  //     }
-  //   }
-  // });
-
-  // bar.animate(0.7);
-
-  var bar = new ProgressBar.Line(lineprog1, {
-    strokeWidth: 1.72,
-    easing: 'easeInOut',
-    duration: 1400,
-    delay: 2800,
-    trailWidth: 1.72,
-    svgStyle: {
-      width: '100%',
-      height: '100%'
-    },
-    step: (state, bar) => {
-      bar.setText(Math.round(bar.value() * 100) + ' %');
-    }
-  });
-
-  bar.animate(.90);
-
-  var bar = new ProgressBar.Line(lineprog2, {
-    strokeWidth: 1.72,
-    easing: 'easeInOut',
-    duration: 1400,
-    delay: 2900,
-    trailWidth: 1.72,
-    svgStyle: {
-      width: '100%',
-      height: '100%'
-    },
-    step: (state, bar) => {
-      bar.setText(Math.round(bar.value() * 100) + ' %');
-    }
-  });
-
-  bar.animate(.80);
-
-  var bar = new ProgressBar.Line(lineprog3, {
-    strokeWidth: 1.72,
-    easing: 'easeInOut',
-    duration: 1400,
-    delay: 3000,
-    trailWidth: 1.72,
-    svgStyle: {
-      width: '100%',
-      height: '100%'
-    },
-    step: (state, bar) => {
-      bar.setText(Math.round(bar.value() * 100) + ' %');
-    }
-  });
-
-  bar.animate(.80);
-
-  var bar = new ProgressBar.Line(lineprog4, {
-    strokeWidth: 1.72,
-    easing: 'easeInOut',
-    duration: 1400,
-    delay: 3100,
-    trailWidth: 1.72,
-    svgStyle: {
-      width: '100%',
-      height: '100%'
-    },
-    step: (state, bar) => {
-      bar.setText(Math.round(bar.value() * 100) + ' %');
-    }
-  });
-
-  bar.animate(.95);
-
-  var bar = new ProgressBar.Line(lineprog5, {
-    strokeWidth: 1.72,
-    easing: 'easeInOut',
-    duration: 1400,
-    delay: 3200,
-    trailWidth: 1.72,
-    svgStyle: {
-      width: '100%',
-      height: '100%'
-    },
-    step: (state, bar) => {
-      bar.setText(Math.round(bar.value() * 100) + ' %');
-    }
-  });
-
-  bar.animate(.80);
-
-  var bar = new ProgressBar.Line(lineprog6, {
-    strokeWidth: 1.72,
-    easing: 'easeInOut',
-    duration: 1400,
-    delay: 3200,
-    trailWidth: 1.72,
-    svgStyle: {
-      width: '100%',
-      height: '100%'
-    },
-    step: (state, bar) => {
-      bar.setText(Math.round(bar.value() * 100) + ' %');
-    }
-  });
-
-  bar.animate(.80);
 
   // Contact form
   $('.art-input').keyup(function() {
@@ -551,12 +413,12 @@ $(function() {
 
     $('.art-counter').each(function() {
       $(this).prop('Counter', 0).animate({
-        Counter: $(this).text()
+        Counter: $(this).text().replace(/,/g, '')
       }, {
         duration: 2000,
         easing: 'linear',
         step: function(now) {
-          $(this).text(Math.ceil(now));
+          $(this).text(Math.ceil(now).toLocaleString('en-US'));
         }
       });
     });
