@@ -2945,11 +2945,11 @@ h3 {
   margin-bottom: 8px;
 }
 
-.art-package-list ul li h6 a {
+.art-package-list ul li .art-label a {
   color: #fafafc;
 }
 
-.art-package-list ul li h6 a:hover {
+.art-package-list ul li .art-label a:hover {
   color: #FFC107;
 }
 
@@ -3005,6 +3005,26 @@ h3 {
   }
 }
 
+/* the preloader splash was an <h4>, which is not a heading either */
+.art-preloader-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #fafafc;
+}
+
+/* ----- data labels -----
+   The theme used <h6> for table labels and counter captions. They are not
+   headings, and using them as such broke the document outline (h1 -> h6).
+   Same look, no heading semantics. */
+.art-label {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #fafafc;
+  margin-bottom: 0;
+}
+
 /* ----- content tables -----
    .art-table was built for the narrow sidebar, where space-between reads as
    two neat columns. Inside a full-width card the label and the value end up
@@ -3020,7 +3040,7 @@ h3 {
   margin-bottom: 8px;
 }
 
-.art-table-cols ul li h6 {
+.art-table-cols ul li .art-label {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 140px;
           flex: 0 0 140px;
@@ -3036,16 +3056,16 @@ h3 {
 
 /* project names are links, and the theme greyed them out below the plain
    text next to them, which inverted the emphasis */
-.art-table-cols ul li h6 a {
+.art-table-cols ul li .art-label a {
   color: #fafafc;
 }
 
-.art-table-cols ul li h6 a:hover {
+.art-table-cols ul li .art-label a:hover {
   color: #FFC107;
 }
 
 /* wider label column for the project list, where the labels are domains */
-.art-table-cols-wide ul li h6 {
+.art-table-cols-wide ul li .art-label {
   -ms-flex: 0 0 200px;
       flex: 0 0 200px;
 }
@@ -3058,7 +3078,7 @@ h3 {
             flex-direction: column;
   }
   .art-table-cols ul li h6,
-  .art-table-cols-wide ul li h6 {
+  .art-table-cols-wide ul li .art-label {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     padding-right: 0;
