@@ -2829,4 +2829,241 @@ html.is-animating .fade-left {
   }
 }
 
+/* -------------------------------------------
+
+  2026 content update
+  Additions only. Nothing above this line was changed.
+
+------------------------------------------- */
+
+/* ----- promoted headings -----
+   Section titles moved h4 -> h2 and card titles h5 -> h3 for a valid
+   document outline. These keep the original visual sizes. */
+h2 {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.art-timeline .art-timeline-content .art-timeline-details-header {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ----- sidebar social icons ----- */
+.art-info-bar .art-ls-social {
+  height: 56px;
+}
+
+.art-info-bar .art-ls-social a {
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* ----- sidebar availability note ----- */
+.art-info-bar .art-availability {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #FFC107;
+}
+
+/* ----- sidebar open source stats ----- */
+.art-os-stats-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #fafafc;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.art-os-stats ul li {
+  margin-bottom: 8px;
+}
+
+.art-os-stats ul li span,
+.art-os-stats ul li span a {
+  color: #FFC107;
+}
+
+.art-os-stats ul li span a:hover {
+  color: #fafafc;
+}
+
+/* clear the fixed social bar at the bottom of the sidebar */
+.art-info-bar .art-knowledge-list {
+  padding-bottom: 80px;
+}
+
+/* ----- in page anchor nav ----- */
+.art-anchor-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 5px 0 15px;
+}
+
+.art-anchor-nav a {
+  color: #8c8c8e;
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 25px;
+  margin-bottom: 8px;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.art-anchor-nav a:last-child {
+  margin-right: 0;
+}
+
+.art-anchor-nav a:hover {
+  color: #FFC107;
+}
+
+/* ----- hero availability line ----- */
+.art-banner-availability {
+  color: #fafafc;
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 460px;
+}
+
+/* ----- about me ----- */
+.about-me p:last-child {
+  margin-bottom: 0;
+}
+
+/* ----- package list in the open source card ----- */
+.art-package-list ul li {
+  margin-bottom: 8px;
+}
+
+.art-package-list ul li h6 a {
+  color: #fafafc;
+}
+
+.art-package-list ul li h6 a:hover {
+  color: #FFC107;
+}
+
+.art-package-list ul li span {
+  color: #FFC107;
+  white-space: nowrap;
+  padding-left: 15px;
+}
+
+/* ----- counters -----
+   The theme sized these for 2 and 3 digit numbers. "195,000" is far wider
+   than the 60px min-width, and the box shrank so the label overlapped it. */
+.art-counter-frame .art-counter-box {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding-right: 12px;
+}
+
+@media (max-width: 1200px) {
+  .art-counter-frame {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .art-counter-frame .art-counter-box {
+    padding-right: 0;
+    margin-bottom: 2px;
+  }
+}
+
+/* ----- small print ----- */
+.art-earlier-work {
+  color: #646466;
+  font-size: 13px;
+  line-height: 1.6;
+  padding: 5px 0 15px;
+}
+
+.art-availability-note {
+  color: #8c8c8e;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 20px;
+}
+
+@media (max-width: 920px) {
+  .art-banner-availability {
+    font-size: 14px;
+  }
+}
+
+/* ----- content tables -----
+   .art-table was built for the narrow sidebar, where space-between reads as
+   two neat columns. Inside a full-width card the label and the value end up
+   at opposite edges of the screen with a lake of nothing between them.
+   .art-table-cols gives them a real label column instead. */
+.art-table-cols ul li {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.art-table-cols ul li h6 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 140px;
+          flex: 0 0 140px;
+  padding-right: 15px;
+}
+
+.art-table-cols ul li span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  text-align: left;
+}
+
+/* project names are links, and the theme greyed them out below the plain
+   text next to them, which inverted the emphasis */
+.art-table-cols ul li h6 a {
+  color: #fafafc;
+}
+
+.art-table-cols ul li h6 a:hover {
+  color: #FFC107;
+}
+
+/* wider label column for the project list, where the labels are domains */
+.art-table-cols-wide ul li h6 {
+  -ms-flex: 0 0 200px;
+      flex: 0 0 200px;
+}
+
+@media (max-width: 575px) {
+  .art-table-cols ul li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .art-table-cols ul li h6,
+  .art-table-cols-wide ul li h6 {
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+    padding-right: 0;
+    margin-bottom: 3px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

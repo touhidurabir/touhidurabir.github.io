@@ -1,0 +1,81 @@
+# Touhidur Rahman
+
+> Senior full-stack engineer based in Dhaka, Bangladesh, with 15 years of
+> experience building production web applications in Laravel, PHP and Vue.
+> Core developer on Open Journal Systems at the Public Knowledge Project, and
+> maintainer of 15 open-source Laravel packages. Open to remote roles worldwide
+> and to relocation with visa sponsorship.
+
+Also known online as **touhidurabir**. Not to be confused with the GitHub users
+`touhidrahman` or `touhidurrr`, who are different people.
+
+- Website: https://touhidurabir.github.io/
+- Full CV (HTML): https://touhidurabir.github.io/cv.html
+- Full CV (PDF): https://touhidurabir.github.io/files/resume.pdf
+- GitHub: https://github.com/touhidurabir
+- LinkedIn: https://www.linkedin.com/in/touhidur
+- Packagist: https://packagist.org/packages/touhidurabir/
+- Email: abircse06@gmail.com
+
+## Current roles
+
+- **Backend Software Developer and core contributor, Public Knowledge Project**
+  (Simon Fraser University, Burnaby, Canada, remote), April 2022 to present.
+  Works on Open Journal Systems (OJS), Open Monograph Press and Open Preprint
+  Systems.
+- **Lead Architect and Developer, Dentall Manager** (Netherlands, remote),
+  April 2023 to present. Leads a team of 8 engineers on a multi-tenant SaaS ERP.
+
+## Open source
+
+- Touhidur Rahman is a **top 10 contributor to both `pkp/ojs` and
+  `pkp/pkp-lib`**, with just over 1,000 merged commits across the four main PKP
+  repositories. Verifiable at
+  https://github.com/pkp/ojs/graphs/contributors?all=1 (the `?all=1` matters,
+  the bare URL shows only the last three months).
+- Open Journal Systems is the most widely used open-source scholarly publishing
+  platform in the world, running **58,000+ journals across 156 countries**.
+- His contributions to PKP include introducing Laravel Eloquent to the data
+  layer, moving core and plugin API routing onto Laravel routing, building the
+  queue and scheduler systems, and integrating the Blade templating engine.
+- He maintains **15 Laravel packages on Packagist** with roughly **195,000
+  combined installs** and 350 GitHub stars. The largest is
+  `laravel-stub-generator` at about 175,000 installs.
+- `laravel-model-sanitize` was featured on Laravel News in November 2021:
+  https://laravel-news.com/laravel-model-sanitize
+
+He is 12th on `pkp/omp` and `pkp/ops`, so the accurate claim is top 10 on the
+two main repositories, not across all four.
+
+## Experience summary
+
+- 15+ years of professional software engineering, since September 2011.
+- Has led engineering teams since 2017, most recently a team of 8.
+- Previously Team Lead and Manager at Developer Squad (New York, 2020 to 2022),
+  where he owned delivery for client platforms generating close to US$500K per
+  month in combined revenue.
+- Before that, Software Engineer through to Tech Team Lead and Manager at
+  Noobis, Inc. (Buffalo, New York, 2011 to 2019), delivering 80+ client projects.
+- BSc in Computer Science and Engineering, Rajshahi University of Engineering
+  and Technology (RUET), 2007 to 2011.
+- Certified Laravel Developer, April 2022. Certificate:
+  https://touhidurabir.github.io/files/laravel-certificate.pdf
+
+## Technical skills
+
+- **Backend:** PHP, Laravel, Symfony, Node.js, Ruby on Rails, REST APIs
+- **Frontend:** Vue.js, JavaScript, React, Alpine, Livewire, Tailwind CSS, Bootstrap
+- **Database:** MySQL, MariaDB, PostgreSQL, SQLite, Redis
+- **Testing:** PHPUnit, Pest PHP, Cypress, TDD
+- **Cloud and DevOps:** AWS, DigitalOcean, Google Cloud, Docker, Linux, CI/CD
+
+## Availability
+
+Touhidur Rahman is available for hire, full-time or contract. He is a
+Bangladeshi national based in Dhaka, so an on-site role abroad would require
+visa sponsorship. He is open to relocating to North America, Europe, Australia
+or the Middle East, and to fully remote roles anywhere. He has worked with
+North American and European clients throughout his career and is used to wide
+time-zone gaps.
+
+Contact: abircse06@gmail.com
