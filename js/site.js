@@ -12,11 +12,16 @@
 
 	function onScroll() {
 		nav.classList.toggle('is-scrolled', window.scrollY > 8);
-		var y = window.scrollY + 120;
+		// probe a point a third of the way down the viewport, so a section
+		// counts as current once it fills the upper part of the screen
+		var y = window.scrollY + Math.min(window.innerHeight * 0.35, 260);
 		var current = null;
 		for (var i = 0; i < sections.length; i++) {
 			if (sections[i].offsetTop <= y) current = sections[i].id;
 		}
+		// at the very bottom the last section may never reach the probe line
+		var atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+		if (atBottom && sections.length) current = sections[sections.length - 1].id;
 		navLinks.forEach(function (a) {
 			a.classList.toggle('is-active', a.getAttribute('href') === '#' + current);
 		});
