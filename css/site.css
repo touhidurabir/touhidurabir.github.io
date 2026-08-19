@@ -606,6 +606,9 @@ strong { color: var(--text); font-weight: 600; }
   transition: border-color 0.2s, color 0.2s;
 }
 .chip:hover { border-color: var(--accent-fg); color: var(--text); }
+.chip { display: inline-flex; align-items: center; gap: 0.45rem; }
+.chip-icon { width: 14px; height: 14px; flex: 0 0 auto; fill: var(--brand, currentColor); }
+.chip-icon-mono { fill: currentColor; opacity: 0.85; }
 .small-print { margin-top: 1.5rem; color: var(--faint); font-size: 0.9rem; }
 
 /* ---- projects ---- */
