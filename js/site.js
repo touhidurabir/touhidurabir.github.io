@@ -29,9 +29,11 @@
 	window.addEventListener('scroll', onScroll, { passive: true });
 	onScroll();
 
-	/* ---- brand link: back to top without adding a hash to the URL ---- */
+	/* ---- brand link: back to top without adding a hash to the URL ----
+	   Only when the brand points at the page you are already on. On cv.html it
+	   links back to the portfolio, and must be left alone to navigate. */
 	var brand = document.querySelector('.brand');
-	if (brand) {
+	if (brand && brand.href.split('#')[0] === location.href.split('#')[0]) {
 		brand.addEventListener('click', function (e) {
 			e.preventDefault();
 			window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });

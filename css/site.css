@@ -734,6 +734,11 @@ strong { color: var(--text); font-weight: 600; }
 .tl-item.is-current::before { background: var(--accent); box-shadow: 0 0 0 5px var(--accent-soft); }
 .tl-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.35rem 1rem; }
 .tl-head h3 { font-size: 1.3rem; }
+/* employer and university names link out to their own sites */
+.tl-head h3 a,
+.tl-role a { border-bottom: 1px solid var(--line-strong); }
+.tl-head h3 a:hover,
+.tl-role a:hover { border-color: var(--accent-fg); }
 .tl-date {
   font-size: 0.85rem;
   font-weight: 500;
