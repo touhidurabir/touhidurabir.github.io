@@ -24,6 +24,17 @@
 	window.addEventListener('scroll', onScroll, { passive: true });
 	onScroll();
 
+	/* ---- brand link: back to top without adding a hash to the URL ---- */
+	var brand = document.querySelector('.brand');
+	if (brand) {
+		brand.addEventListener('click', function (e) {
+			e.preventDefault();
+			window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+			if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+		});
+	}
+	if (location.hash === '#top') history.replaceState(null, '', location.pathname + location.search);
+
 	/* ---- mobile menu ---- */
 	var toggle = document.querySelector('.nav-toggle');
 	var menu = document.getElementById('mobile-menu');
