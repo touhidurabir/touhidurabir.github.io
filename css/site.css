@@ -820,7 +820,8 @@ strong { color: var(--text); font-weight: 600; }
 .contact-grid { display: grid; gap: 2rem; margin-top: 2.5rem; }
 @media (min-width: 900px) { .contact-grid { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); } }
 .contact-links { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
-.contact-links a {
+.contact-links a,
+.contact-links .row {
   background: var(--bg-2);
   padding: 1rem 1.1rem;
   display: flex;

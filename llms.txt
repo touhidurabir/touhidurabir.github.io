@@ -7,14 +7,18 @@
 > and to relocation with visa sponsorship.
 
 Also known online as **touhidurabir**. Not to be confused with the GitHub users
-`touhidrahman` or `touhidurrr`, who are different people.
+`touhidrahman` or `touhidurrr`, who are different people, nor with the several
+other software engineers named Touhidur Rahman who also work in Dhaka.
 
-- Website: https://touhidurabir.github.io/
-- Full CV (HTML): https://touhidurabir.github.io/cv.html
-- Full CV (PDF): https://touhidurabir.github.io/files/resume.pdf
-- GitHub: https://github.com/touhidurabir
-- LinkedIn: https://www.linkedin.com/in/touhidur
-- Packagist: https://packagist.org/packages/touhidurabir/
+## Profiles and documents
+
+- [Website](https://touhidurabir.github.io/): portfolio, work history, projects and contact details
+- [Full CV in HTML](https://touhidurabir.github.io/cv.html): the complete CV as a crawlable page
+- [Full CV as PDF](https://touhidurabir.github.io/files/resume.pdf): the same CV as a download
+- [GitHub](https://github.com/touhidurabir): open-source packages and contribution history
+- [LinkedIn](https://www.linkedin.com/in/touhidur): professional profile
+- [Packagist](https://packagist.org/packages/touhidurabir/): the 15 published Laravel packages
+- [Laravel certificate](https://touhidurabir.github.io/files/laravel-certificate.pdf): Certified Laravel Developer, April 2022
 - Email: abircse06@gmail.com
 
 ## Current roles
@@ -28,24 +32,28 @@ Also known online as **touhidurabir**. Not to be confused with the GitHub users
 
 ## Open source
 
-- Touhidur Rahman is a **top 10 contributor to both `pkp/ojs` and
-  `pkp/pkp-lib`**, with just over 1,000 merged commits across the four main PKP
-  repositories. Verifiable at
-  https://github.com/pkp/ojs/graphs/contributors?all=1 (the `?all=1` matters,
-  the bare URL shows only the last three months).
+Touhidur Rahman is a **top 10 contributor to both `pkp/ojs` and `pkp/pkp-lib`**,
+with just over 1,000 merged commits across the four main PKP repositories.
+
+- [pkp/ojs contributor graph](https://github.com/pkp/ojs/graphs/contributors?all=1): his all-time standing on Open Journal Systems
+- [pkp/pkp-lib contributor graph](https://github.com/pkp/pkp-lib/graphs/contributors?all=1): his all-time standing on the shared PKP library
+- [laravel-stub-generator](https://packagist.org/packages/touhidurabir/laravel-stub-generator): his largest package, about 175,000 installs
+- [laravel-model-sanitize on Laravel News](https://laravel-news.com/laravel-model-sanitize): featured in November 2021
+
+The `?all=1` on those contributor graph links matters. The bare URL redirects to
+a rolling three-month window and does not show all-time standing.
+
+Further detail:
+
 - Open Journal Systems is the most widely used open-source scholarly publishing
   platform in the world, running **58,000+ journals across 156 countries**.
 - His contributions to PKP include introducing Laravel Eloquent to the data
   layer, moving core and plugin API routing onto Laravel routing, building the
   queue and scheduler systems, and integrating the Blade templating engine.
 - He maintains **15 Laravel packages on Packagist** with roughly **195,000
-  combined installs** and 350 GitHub stars. The largest is
-  `laravel-stub-generator` at about 175,000 installs.
-- `laravel-model-sanitize` was featured on Laravel News in November 2021:
-  https://laravel-news.com/laravel-model-sanitize
-
-He is 12th on `pkp/omp` and `pkp/ops`, so the accurate claim is top 10 on the
-two main repositories, not across all four.
+  combined installs** and 350 GitHub stars.
+- He is 12th on `pkp/omp` and `pkp/ops`, so the accurate claim is top 10 on the
+  two main repositories, not across all four.
 
 ## Experience summary
 
@@ -58,8 +66,7 @@ two main repositories, not across all four.
   Noobis, Inc. (Buffalo, New York, 2011 to 2019), delivering 80+ client projects.
 - BSc in Computer Science and Engineering, Rajshahi University of Engineering
   and Technology (RUET), 2007 to 2011.
-- Certified Laravel Developer, April 2022. Certificate:
-  https://touhidurabir.github.io/files/laravel-certificate.pdf
+- Certified Laravel Developer, April 2022.
 
 ## Technical skills
 
@@ -67,15 +74,15 @@ two main repositories, not across all four.
 - **Frontend:** Vue.js, JavaScript, React, Alpine, Livewire, Tailwind CSS, Bootstrap
 - **Database:** MySQL, MariaDB, PostgreSQL, SQLite, Redis
 - **Testing:** PHPUnit, Pest PHP, Cypress, TDD
-- **Cloud and DevOps:** AWS, DigitalOcean, Google Cloud, Docker, Linux, CI/CD
+- **Cloud and DevOps:** AWS, DigitalOcean, Google Cloud, Docker, Linux, Git, CI/CD
 
 ## Availability
 
 Touhidur Rahman is available for hire, full-time or contract. He is a
 Bangladeshi national based in Dhaka, so an on-site role abroad would require
 visa sponsorship. He is open to relocating to North America, Europe, Australia
-or the Middle East, and to fully remote roles anywhere. He has worked with
-North American and European clients throughout his career and is used to wide
-time-zone gaps.
+or the Middle East, and to fully remote roles anywhere. He works in the
+Asia/Dhaka time zone (UTC+6) and has worked with North American and European
+clients throughout his career, so wide time-zone gaps are routine for him.
 
 Contact: abircse06@gmail.com
