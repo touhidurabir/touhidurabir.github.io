@@ -572,7 +572,7 @@ strong { color: var(--text); font-weight: 600; }
 .is-visible .pkg .bar i { transform: scaleX(1); }
 
 /* ---- what I do: numbered list ---- */
-.list-rules { border-top: 1px solid var(--line); }
+.list-rules { border-top: 1px solid var(--line); margin: 0; padding: 0; list-style: none; }
 .list-rules > li {
   display: grid;
   gap: 0.75rem 2rem;
@@ -580,9 +580,19 @@ strong { color: var(--text); font-weight: 600; }
   border-bottom: 1px solid var(--line);
 }
 @media (min-width: 800px) {
-  .list-rules > li { grid-template-columns: 4rem minmax(0, 4fr) minmax(0, 7fr); align-items: start; }
+  .list-rules > li { grid-template-columns: 5rem minmax(0, 4fr) minmax(0, 7fr); align-items: start; }
 }
-.list-rules .idx { color: var(--accent-fg); font-weight: 600; font-size: 0.95rem; padding-top: 0.3rem; font-variant-numeric: tabular-nums; }
+.list-rules .idx {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--accent-fg);
+  opacity: 0.5;
+  font-variant-numeric: tabular-nums;
+  margin-top: -0.2rem;
+}
 .list-rules h3 { font-size: 1.35rem; }
 .list-rules p { color: var(--muted); }
 
