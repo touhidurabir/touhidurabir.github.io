@@ -1,107 +1,180 @@
 <!doctype html>
-
 <html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+	<meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
+	<meta name="robots" content="noindex, follow">
 
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="theme-color" content="#2B2B35">
-		<meta name="robots" content="noindex, follow">
+	<title>Page not found | Touhidur Rahman</title>
+	<meta name="description" content="That page does not exist. Head back to the portfolio of Touhidur Rahman, senior full-stack engineer.">
 
-		<title>Page not found | Touhidur Rahman</title>
-		<meta name="description" content="That page does not exist. Head back to the portfolio of Touhidur Rahman, senior full-stack engineer.">
+	<link rel="icon" type="image/jpeg" href="/img/me-2.jpg">
 
-		<link rel="icon" type="image/jpeg" href="/img/me-2.jpg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap">
 
-		<style>
-			@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Courier+Prime:wght@400&display=swap");
+	<script>
+		/* match whatever theme the visitor picked on the rest of the site */
+		(function () {
+			try {
+				var t = localStorage.getItem('theme');
+				if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+			} catch (e) {}
+		})();
+	</script>
 
-			* { margin: 0; padding: 0; box-sizing: border-box; }
-
-			body {
-				min-height: 100vh;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				padding: 30px;
-				font-family: "Poppins", sans-serif;
-				font-weight: 300;
-				letter-spacing: 0.5px;
-				background: #191923;
-				color: #8c8c8e;
-				text-align: center;
+	<!-- This page is deliberately standalone: no site.css, no site.js, nothing to
+	     go wrong. The tokens below are copied from css/site.css, so if the palette
+	     there ever changes, change it here too. -->
+	<style>
+		:root {
+			--bg: #0b0c10;
+			--bg-2: #101117;
+			--line: rgba(255, 255, 255, 0.08);
+			--line-strong: rgba(255, 255, 255, 0.16);
+			--text: #ececf1;
+			--muted: #a4a7b5;
+			--accent: #14b8a6;
+			--accent-fg: #2dd4bf;
+			--accent-ink: #062b27;
+			--glow: rgba(20, 184, 166, 0.16);
+			color-scheme: dark;
+		}
+		[data-theme="light"] {
+			--bg: #f6f5f1;
+			--bg-2: #ffffff;
+			--line: rgba(20, 20, 30, 0.09);
+			--line-strong: rgba(20, 20, 30, 0.18);
+			--text: #16171d;
+			--muted: #42454f;
+			--accent: #0f766e;
+			--accent-fg: #0f766e;
+			--accent-ink: #ffffff;
+			--glow: rgba(15, 118, 110, 0.16);
+			color-scheme: light;
+		}
+		@media (prefers-color-scheme: light) {
+			:root:not([data-theme="dark"]) {
+				--bg: #f6f5f1;
+				--bg-2: #ffffff;
+				--line: rgba(20, 20, 30, 0.09);
+				--line-strong: rgba(20, 20, 30, 0.18);
+				--text: #16171d;
+				--muted: #42454f;
+				--accent: #0f766e;
+				--accent-fg: #0f766e;
+				--accent-ink: #ffffff;
+				--glow: rgba(15, 118, 110, 0.16);
+				color-scheme: light;
 			}
+		}
 
-			.code {
-				font-family: "Courier Prime", monospace;
-				font-size: 15px;
-				color: #FFC107;
-				letter-spacing: 1px;
-				margin-bottom: 20px;
-			}
+		*, *::before, *::after { box-sizing: border-box; }
 
-			h1 {
-				font-size: 52px;
-				font-weight: 800;
-				color: #fafafc;
-				line-height: 1.1;
-				margin-bottom: 18px;
-			}
+		body {
+			margin: 0;
+			min-height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: clamp(1.5rem, 5vw, 3rem);
+			position: relative;
+			overflow-x: hidden;
+			background: var(--bg);
+			color: var(--muted);
+			font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+			font-size: 1rem;
+			line-height: 1.6;
+			-webkit-font-smoothing: antialiased;
+		}
 
-			p { font-size: 15px; line-height: 1.7; max-width: 430px; margin: 0 auto 32px; }
+		/* the same accent bloom the contact section uses */
+		body::before {
+			content: "";
+			position: absolute;
+			left: 50%; top: 50%;
+			width: 70vw; height: 70vw;
+			max-width: 820px; max-height: 820px;
+			transform: translate(-50%, -50%);
+			background: radial-gradient(closest-side, var(--glow), transparent 70%);
+			pointer-events: none;
+		}
 
-			.links { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+		main { position: relative; width: min(100%, 560px); }
 
-			a.btn {
-				display: inline-block;
-				padding: 13px 26px;
-				background: #FFC107;
-				color: #191923;
-				font-size: 12px;
-				font-weight: 600;
-				letter-spacing: 1.5px;
-				text-transform: uppercase;
-				text-decoration: none;
-				box-shadow: 0 1px 4px 0 rgba(15, 15, 20, 0.1);
-			}
+		.code {
+			font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+			font-size: 0.78rem;
+			letter-spacing: 0.18em;
+			text-transform: uppercase;
+			color: var(--accent-fg);
+			margin-bottom: 1.25rem;
+		}
 
-			a.btn:hover { background: #fafafc; }
+		h1 {
+			margin: 0 0 1rem;
+			font-family: "Bricolage Grotesque", "Inter", system-ui, sans-serif;
+			font-size: clamp(2.25rem, 7vw, 3.5rem);
+			font-weight: 800;
+			letter-spacing: -0.035em;
+			line-height: 1.05;
+			color: var(--text);
+		}
 
-			a.plain {
-				display: inline-block;
-				padding: 13px 10px;
-				color: #fafafc;
-				font-size: 12px;
-				font-weight: 600;
-				letter-spacing: 1.5px;
-				text-transform: uppercase;
-				text-decoration: none;
-			}
+		p { margin: 0 0 2rem; max-width: 46ch; }
 
-			a.plain:hover { color: #FFC107; }
+		.links { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.25rem; }
 
-			@media (max-width: 575px) {
-				h1 { font-size: 38px; }
-			}
-		</style>
-	</head>
+		a {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.45rem;
+			text-decoration: none;
+			font-weight: 600;
+			font-size: 0.95rem;
+		}
 
-	<body>
+		a.btn {
+			padding: 0.7rem 1.15rem;
+			border: 1px solid transparent;
+			border-radius: 6px;
+			transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+		}
+		a.primary { background: var(--accent); color: var(--accent-ink); }
+		a.primary:hover { background: var(--accent-fg); }
+		a.ghost { border-color: var(--line-strong); color: var(--text); }
+		a.ghost:hover { border-color: var(--accent-fg); color: var(--accent-fg); }
 
-		<main>
-			<div class="code">&lt;code&gt; 404 &lt;/code&gt;</div>
+		a.plain { color: var(--muted); }
+		a.plain:hover { color: var(--accent-fg); }
+		a svg { width: 1em; height: 1em; }
 
-			<h1>This page does not exist.</h1>
+		:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
 
-			<p>The link is either out of date or slightly wrong. Everything worth reading is one click away.</p>
+		@media (prefers-reduced-motion: reduce) {
+			a.btn { transition: none; }
+		}
+	</style>
+</head>
 
-			<div class="links">
-				<a class="btn" href="/">Go to the portfolio</a>
-				<a class="plain" href="/cv.html">View full CV</a>
-				<a class="plain" href="https://github.com/touhidurabir" target="_blank" rel="noopener">GitHub</a>
-			</div>
-		</main>
+<body>
+	<main>
+		<p class="code">Error 404</p>
 
-	</body>
+		<h1>This page does not exist.</h1>
 
+		<p>The link is either out of date or slightly wrong. Everything worth reading is one click away.</p>
+
+		<div class="links">
+			<a class="btn primary" href="/">Go to the portfolio
+				<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+			</a>
+			<a class="btn ghost" href="/cv.html">View full CV</a>
+			<a class="plain" href="https://github.com/touhidurabir" target="_blank" rel="noopener">GitHub</a>
+		</div>
+	</main>
+</body>
 </html>

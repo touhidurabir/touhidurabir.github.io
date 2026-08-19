@@ -1,0 +1,312 @@
+/* ==========================================================================
+   cv.css — the CV page only. Loads after site.css and inherits every token
+   from it, so the two pages stay one design. Nothing here redefines a colour
+   or a typeface.
+
+   What is different on this page is structure, not style. A CV is a document
+   rather than a landing page: the dates get a real aligned column, the rhythm
+   is tighter, and the whole thing has to print.
+   ========================================================================== */
+
+/* ---- document rhythm ----
+   Sections here sit closer together than on the portfolio. A CV is read in one
+   pass, so the large scroll-stage padding works against it. */
+.doc { padding-block: clamp(2.75rem, 5.5vw, 4.5rem); border-top: 1px solid var(--line); }
+/* one step down from the portfolio's display scale: this page is read in a
+   single pass, so the headings are signposts rather than stages */
+.doc .section-head { margin-bottom: 1.75rem; }
+.doc .section-head h2,
+.doc .section-title { font-size: clamp(1.6rem, 3vw, 2.25rem); }
+
+
+/* ---- masthead ---- */
+.cv-head {
+  padding-top: calc(var(--nav-h) + clamp(2.5rem, 6vw, 4.5rem));
+  padding-bottom: clamp(2.5rem, 5vw, 3.5rem);
+  position: relative;
+  overflow: hidden;
+}
+.cv-head::before {
+  content: "";
+  position: absolute;
+  right: -20vw; top: -30vh;
+  width: 60vw; height: 60vw;
+  max-width: 760px; max-height: 760px;
+  background: radial-gradient(closest-side, var(--glow), transparent 70%);
+  pointer-events: none;
+}
+.cv-head .wrap { position: relative; }
+.cv-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-fg);
+  margin-bottom: 1rem;
+}
+.cv-head h1 {
+  font-size: clamp(2.6rem, 7vw, 4.75rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+.cv-role {
+  margin-top: 0.75rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.05rem, 2.2vw, 1.4rem);
+  color: var(--muted);
+  letter-spacing: -0.01em;
+}
+.cv-lede { margin-top: 1.5rem; max-width: 62ch; color: var(--muted); font-size: 1.0625rem; }
+.cv-actions { margin-top: 2rem; display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.5rem; }
+
+/* the vitals panel: everything a recruiter copies out of a CV, in one block.
+   It reuses .contact-links from site.css, so there is no second style for the
+   same component. */
+.cv-masthead { display: grid; gap: 2.5rem; }
+@media (min-width: 1000px) {
+  .cv-masthead { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 4rem; align-items: end; }
+}
+.cv-vitals .v.live { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--accent-fg); }
+.cv-vitals .v.live::before {
+  content: "";
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+
+/* ---- career span chart ----
+   A Gantt row per role on one Sep 2011 to 2026 scale. It shows fifteen years
+   as length instead of asserting it, and it is the only way to make the two
+   concurrent current roles legible. The bars are decoration: every row states
+   its own dates in text, so nothing is lost without them. */
+.spans { margin: 0 0 2.5rem; padding: 0; list-style: none; display: grid; gap: 0.55rem; }
+.span-row { display: grid; gap: 0.3rem; align-items: center; }
+.span-org { font-weight: 600; font-size: 0.95rem; }
+.span-when {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--faint);
+  font-variant-numeric: tabular-nums;
+}
+.span-track {
+  position: relative;
+  height: 10px;
+  border-radius: 2px;
+  background: var(--bg-3);
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+.span-bar {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: var(--l);
+  width: var(--w);
+  background: var(--line-strong);
+  border-radius: 1px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.8s var(--ease);
+}
+.span-bar.is-current { background: var(--accent); }
+.is-visible .span-bar { transform: scaleX(1); }
+.span-row:nth-child(2) .span-bar { transition-delay: 0.06s; }
+.span-row:nth-child(3) .span-bar { transition-delay: 0.12s; }
+.span-row:nth-child(4) .span-bar { transition-delay: 0.18s; }
+
+.span-scale {
+  display: grid;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--faint);
+  font-variant-numeric: tabular-nums;
+}
+.span-scale .ticks { display: flex; justify-content: space-between; border-top: 1px solid var(--line); padding-top: 0.4rem; }
+
+@media (min-width: 760px) {
+  .span-row,
+  .span-scale { grid-template-columns: minmax(0, 13rem) 11.5rem minmax(0, 1fr); gap: 1.25rem; }
+  .span-scale .ticks { grid-column: 3; }
+}
+
+
+/* ---- dated entries: work history, education ----
+   The date column is the point. Aligned, tabular and monospaced, it lets
+   someone read the shape of a career without reading a word of the prose. */
+.entries { border-top: 1px solid var(--line); }
+.entry { padding-block: 2rem; border-bottom: 1px solid var(--line); display: grid; gap: 0.85rem; }
+@media (min-width: 900px) {
+  .entry { grid-template-columns: 12.5rem minmax(0, 1fr); gap: 2.5rem; }
+  .entry-when { padding-top: 0.35rem; }
+}
+.entry-when {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--faint);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.5;
+}
+.entry-when .now { display: block; margin-top: 0.5rem; color: var(--accent-fg); }
+.entry-when .now::before {
+  content: "";
+  display: inline-block;
+  width: 6px; height: 6px;
+  margin-right: 0.45rem;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+  vertical-align: 0.05em;
+}
+.entry h3 { font-size: 1.2rem; }
+.entry-org { margin-top: 0.3rem; color: var(--muted); font-size: 0.95rem; }
+.entry-org b { color: var(--text); font-weight: 600; }
+/* employer and university names link out to their own sites */
+.entry-org a { border-bottom: 1px solid var(--line-strong); }
+.entry-org a:hover { border-color: var(--accent-fg); }
+.entry-note { margin-top: 0.85rem; color: var(--faint); font-size: 0.9rem; }
+.entry .link-arrow { margin-top: 1rem; }
+
+/* bullets: same hairline dash as the portfolio timeline */
+.bullets { margin-top: 1.1rem; display: grid; gap: 0.55rem; color: var(--muted); }
+.bullets li { position: relative; padding-left: 1.6rem; font-size: 0.95rem; }
+.bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0.7em;
+  width: 0.7rem; height: 1px;
+  background: var(--line-strong);
+}
+.bullets b { color: var(--text); font-weight: 600; }
+
+
+/* ---- term and detail rows: skills, projects, languages ----
+   Replaces the old two-edge table, where the label sat hard left and the value
+   hard right with a lake of nothing between them. */
+.deflist { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.deflist > div { background: var(--bg-2); padding: 1rem 1.15rem; display: grid; gap: 0.25rem; }
+@media (min-width: 700px) {
+  .deflist > div { grid-template-columns: 11rem minmax(0, 1fr); gap: 1.5rem; align-items: baseline; }
+  .deflist.is-wide > div { grid-template-columns: 15rem minmax(0, 1fr); }
+  /* for a deflist sitting in a side column rather than the full width */
+  .deflist.is-compact > div { grid-template-columns: 7rem minmax(0, 1fr); gap: 1rem; }
+}
+.deflist dt,
+.deflist .t { font-family: var(--font-mono); font-size: 0.82rem; color: var(--faint); }
+.deflist .t a { color: var(--accent-fg); }
+.deflist .t a:hover { border-bottom: 1px solid currentColor; }
+.deflist dd,
+.deflist .d { margin: 0; color: var(--muted); font-size: 0.95rem; }
+
+
+/* ---- open source figures ---- */
+.os-grid { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+.os-cell { background: var(--bg-2); padding: 1.15rem 1.15rem 1.25rem; }
+.os-cell .k { font-family: var(--font-mono); font-size: 0.75rem; color: var(--faint); }
+.os-cell .v { margin-top: 0.4rem; font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; letter-spacing: -0.02em; }
+.os-cell .v a { color: var(--text); border-bottom: 1px solid var(--line-strong); }
+.os-cell .v a:hover { color: var(--accent-fg); border-color: var(--accent-fg); }
+
+
+/* ---- closing note ---- */
+.cv-close { display: grid; gap: 2rem; }
+@media (min-width: 900px) { .cv-close { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 4rem; } }
+
+
+/* ==========================================================================
+   print
+   Recruiters print CVs. Drop the chrome, force the paper palette regardless of
+   the on-screen theme, and keep entries off page breaks.
+   ========================================================================== */
+@media print {
+  :root,
+  [data-theme="dark"],
+  [data-theme="light"] {
+    --bg: #ffffff;
+    --bg-2: #ffffff;
+    --bg-3: #ffffff;
+    --line: #d5d5d8;
+    --line-strong: #a9a9b0;
+    --text: #000000;
+    --muted: #26262c;
+    --faint: #55555e;
+    --accent: #0f766e;
+    --accent-fg: #0f766e;
+    --accent-soft: transparent;
+    --glow: transparent;
+    color-scheme: light;
+  }
+
+  @page { margin: 13mm 12mm; }
+
+  html { scroll-padding-top: 0; }
+  body { background: #fff; font-size: 9.5pt; line-height: 1.42; }
+  body::before { display: none; }               /* grain */
+  p + p { margin-top: 0.5em; }
+
+  .nav,
+  .mobile-menu,
+  .skip-link,
+  .cv-actions,
+  .cv-head::before,
+  .site-foot,
+  .spans,
+  .span-scale,
+  .no-print { display: none !important; }
+
+  /* the reveal animation leaves everything at opacity 0 until it scrolls into
+     view, and print never scrolls */
+  .reveal,
+  .card { opacity: 1 !important; transform: none !important; transition: none !important; }
+
+  .cv-head { padding-top: 0; padding-bottom: 0.6rem; }
+  .cv-head h1 { font-size: 24pt; }
+  .cv-role { font-size: 11pt; margin-top: 0.35rem; }
+  .cv-lede { font-size: 9.5pt; max-width: none; margin-top: 0.7rem; }
+  .cv-eyebrow { margin-bottom: 0.4rem; font-size: 7.5pt; }
+
+  /* the vitals block is the one part of the header paper still needs */
+  .cv-masthead { display: block; }
+  .cv-vitals { margin-top: 0.7rem; }
+  .cv-vitals .contact-links { display: grid; grid-template-columns: repeat(2, 1fr); }
+  .cv-vitals .contact-links a,
+  .cv-vitals .contact-links .row { display: grid; grid-template-columns: 5rem 1fr; padding: 0.28rem 0.5rem; justify-content: start; gap: 0.5rem; }
+  .cv-vitals .k, .cv-vitals .v { font-size: 8.5pt; }
+  .cv-vitals .v.live::before { display: none; }
+
+  .doc { padding-block: 0.55rem; }
+  .doc .section-head { margin-bottom: 0.6rem; }
+  .doc .section-head h2, .doc .section-title { font-size: 14pt; }
+
+  .os-grid { grid-template-columns: repeat(3, 1fr); }
+  .os-cell { padding: 0.5rem 0.65rem; }
+  .os-cell .v { font-size: 10.5pt; margin-top: 0.2rem; }
+
+  .entry { padding-block: 0.6rem; break-inside: avoid; page-break-inside: avoid; }
+  .entry h3 { font-size: 11pt; }
+  .entry-org { margin-top: 0.2rem; font-size: 9pt; }
+  .entry-note { margin-top: 0.45rem; font-size: 8.5pt; }
+  .bullets { margin-top: 0.5rem; gap: 0.28rem; }
+  .bullets li { font-size: 9pt; }
+  .deflist > div { padding: 0.4rem 0.6rem; }
+  .deflist dd, .deflist .d { font-size: 9pt; }
+  .small-print { margin-top: 0.6rem; font-size: 8.5pt; }
+  .deflist, .os-grid, .card { break-inside: avoid; page-break-inside: avoid; }
+
+  a { text-decoration: none; }
+  .entry-org a { border-bottom: 0; }
+  /* spell out the destination for employers and in the project list, where the
+     URL is verifiable evidence. Everywhere else it would break up the prose for
+     no gain. */
+  .entry-org a[href^="http"]::after,
+  .deflist a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 8pt; color: #55555e; word-break: break-all; }
+
+  /* a heading should never be the last thing on a page */
+  .doc .section-head { break-after: avoid; page-break-after: avoid; }
+
+  .print-only { display: block; margin-top: 1.25rem; padding-top: 0.5rem; border-top: 1px solid var(--line); font-size: 8pt; color: #55555e; }
+}
+
+/* on screen this line is noise: the reader is already on the page */
+.print-only { display: none; }
