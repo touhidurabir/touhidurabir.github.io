@@ -724,8 +724,16 @@ strong { color: var(--text); font-weight: 600; }
 .tl-role b { color: var(--text); font-weight: 600; }
 .tl-note { margin-top: 0.75rem; color: var(--faint); font-size: 0.9rem; }
 .tl-bullets { margin-top: 1rem; display: grid; gap: 0.5rem; color: var(--muted); }
-.tl-bullets li { position: relative; padding-left: 1.1rem; font-size: 0.95rem; }
-.tl-bullets li::before { content: "—"; position: absolute; left: 0; color: var(--accent-fg); }
+.tl-bullets li { position: relative; padding-left: 1.6rem; font-size: 0.95rem; }
+.tl-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.8em;
+  width: 0.9rem;
+  height: 1px;
+  background: var(--accent-fg);
+}
 .side-card + .side-card { margin-top: 1rem; }
 .side-card h3 { font-size: 1.05rem; }
 .side-card .tl-role { margin-top: 0.25rem; }
