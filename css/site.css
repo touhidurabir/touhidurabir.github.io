@@ -1,6 +1,6 @@
 /* ==========================================================================
    touhidurabir.github.io — site.css
-   Dark editorial layout. One accent (amber). Thin rules, small radii,
+   Dark editorial layout. One accent (teal). Thin rules, small radii,
    monospace labels, large display type. No decorative shadows.
    ========================================================================== */
 
@@ -13,12 +13,12 @@
   --text: #ececf1;
   --muted: #a4a7b5;
   --faint: #8a8d9c;
-  --accent: #ffb703;
-  --accent-fg: #ffb703;          /* accent used as text; darker in light mode */
-  --accent-hover: #ffc633;
-  --accent-ink: #1a1400;
-  --accent-soft: rgba(255, 183, 3, 0.12);
-  --glow: rgba(255, 183, 3, 0.16);
+  --accent: #14b8a6;             /* fills: buttons, dots, bars */
+  --accent-fg: #2dd4bf;          /* accent used as text; darker in light mode */
+  --accent-hover: #2dd4bf;
+  --accent-ink: #062b27;
+  --accent-soft: rgba(45, 212, 191, 0.14);
+  --glow: rgba(20, 184, 166, 0.16);
   --nav-bg: rgba(11, 12, 16, 0.78);
   --menu-bg: rgba(11, 12, 16, 0.96);
   --portrait-fade: rgba(11, 12, 16, 0.9);
@@ -52,9 +52,12 @@
   --text: #16171d;
   --muted: #42454f;
   --faint: #616474;
-  --accent-fg: #a85400;
-  --accent-soft: rgba(255, 183, 3, 0.18);
-  --glow: rgba(255, 183, 3, 0.22);
+  --accent: #0f766e;
+  --accent-fg: #0f766e;
+  --accent-hover: #115e59;
+  --accent-ink: #ffffff;
+  --accent-soft: rgba(15, 118, 110, 0.14);
+  --glow: rgba(15, 118, 110, 0.16);
   --nav-bg: rgba(246, 245, 241, 0.82);
   --menu-bg: rgba(246, 245, 241, 0.97);
   --portrait-fade: rgba(246, 245, 241, 0.92);
@@ -71,9 +74,12 @@
     --text: #16171d;
     --muted: #42454f;
     --faint: #616474;
-    --accent-fg: #a85400;
-    --accent-soft: rgba(255, 183, 3, 0.18);
-    --glow: rgba(255, 183, 3, 0.22);
+    --accent: #0f766e;
+    --accent-fg: #0f766e;
+    --accent-hover: #115e59;
+    --accent-ink: #ffffff;
+    --accent-soft: rgba(15, 118, 110, 0.14);
+    --glow: rgba(15, 118, 110, 0.16);
     --nav-bg: rgba(246, 245, 241, 0.82);
     --menu-bg: rgba(246, 245, 241, 0.97);
     --portrait-fade: rgba(246, 245, 241, 0.92);
@@ -337,7 +343,7 @@ strong { color: var(--text); font-weight: 600; }
   overflow: hidden;
 }
 .hero::before {
-  /* single soft amber glow, top-right */
+  /* single soft accent glow, top-right */
   content: "";
   position: absolute;
   right: -20vw;
