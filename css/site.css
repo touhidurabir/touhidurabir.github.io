@@ -741,10 +741,11 @@ strong { color: var(--text); font-weight: 600; }
 
 /* ---- testimonials ---- */
 .quotes { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-.quote { display: flex; flex-direction: column; }
+.quote { display: flex; flex-direction: column; margin: 0; }
+.quote figcaption { margin-top: auto; }
 .quote blockquote { margin: 0; color: var(--muted); font-size: 1rem; }
 .quote blockquote::before { content: "“"; display: block; font-family: var(--font-display); font-size: 3rem; line-height: 0.6; color: var(--accent-fg); margin-bottom: 0.75rem; }
-.quote footer { margin-top: 1.5rem; display: flex; align-items: center; gap: 0.85rem; padding-top: 1.25rem; border-top: 1px solid var(--line); }
+.quote footer { margin-top: 1.5rem; display: flex; align-items: flex-start; align-items: center; gap: 0.85rem; padding-top: 1.25rem; border-top: 1px solid var(--line); }
 .quote footer img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; }
 .quote footer b { display: block; font-weight: 600; }
 .quote footer span { color: var(--faint); font-size: 0.85rem; }
