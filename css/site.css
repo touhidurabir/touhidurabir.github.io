@@ -590,8 +590,10 @@ strong { color: var(--text); font-weight: 600; }
 .skills {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: 1fr;
 }
+@media (min-width: 640px) { .skills { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .skills { grid-template-columns: repeat(3, 1fr); } }
 .skill-group h3 { font-size: 0.95rem; margin-bottom: 0.9rem; display: flex; align-items: center; gap: 0.6rem; }
 .skill-group h3::before { content: ""; width: 6px; height: 6px; background: var(--accent); border-radius: 1px; }
 .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
