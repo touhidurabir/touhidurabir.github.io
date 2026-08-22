@@ -19,7 +19,7 @@ Lead architect and developer of a multi-tenant SaaS ERP used by 50+ dental and m
 **Laravel packages.**
 15 published on [Packagist](https://packagist.org/packages/touhidurabir/), installed around 195,000 times between them. [laravel-stub-generator](https://packagist.org/packages/touhidurabir/laravel-stub-generator) accounts for about 175,000 of those. [laravel-model-sanitize](https://packagist.org/packages/touhidurabir/laravel-model-sanitize) was featured on [Laravel News](https://laravel-news.com/laravel-model-sanitize).
 
-Certified Laravel Developer since April 2022. Open to remote roles worldwide, and to on-site roles abroad with visa sponsorship. Full-time or contract.
+Certified Laravel Developer since April 2022. Open to remote roles worldwide, and to the right on-site role abroad with visa sponsorship. Full-time or contract.
 
 ## Find me
 

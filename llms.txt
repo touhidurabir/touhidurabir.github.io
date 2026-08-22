@@ -3,8 +3,8 @@
 > Senior full-stack engineer based in Dhaka, Bangladesh, with 15 years of
 > experience building production web applications in Laravel, PHP and Vue.
 > Core developer on Open Journal Systems at the Public Knowledge Project, and
-> maintainer of 15 open-source Laravel packages. Open to remote roles worldwide
-> and to relocation with visa sponsorship.
+> maintainer of 15 open-source Laravel packages. Open to remote roles
+> worldwide, and to the right on-site role abroad with visa sponsorship.
 
 Also known online as **touhidurabir**. Not to be confused with the GitHub users
 `touhidrahman` or `touhidurrr`, who are different people, nor with the several
