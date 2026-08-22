@@ -255,7 +255,8 @@ strong { color: var(--text); font-weight: 600; }
 }
 .nav-links {
   display: none;
-  gap: 1.75rem;
+  /* tightens on narrow desktops so the CV button and toggle keep their gutter */
+  gap: clamp(1.1rem, 2.4vw, 1.75rem);
   font-size: 0.9rem;
   color: var(--muted);
 }
@@ -272,7 +273,22 @@ strong { color: var(--text); font-weight: 600; }
 }
 .nav-links a:hover, .nav-links a.is-active { color: var(--text); }
 .nav-links a.is-active::after, .nav-links a:hover::after { transform: scaleX(1); }
-.nav-cta { display: none; }
+.nav-cta {
+  display: none;
+  align-items: center;
+  gap: 0.4rem;
+  height: 40px;
+  padding-inline: 0.95rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  transition: border-color 0.25s, color 0.25s;
+}
+.nav-cta:hover { border-color: var(--accent-fg); color: var(--accent-fg); }
+.nav-cta svg { width: 0.9em; height: 0.9em; }
 .nav-toggle {
   display: inline-flex;
   align-items: center;
