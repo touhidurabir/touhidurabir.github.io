@@ -25,10 +25,11 @@ other software engineers named Touhidur Rahman who also work in Dhaka.
 
 - **Backend Software Developer and core contributor, Public Knowledge Project**
   (Simon Fraser University, Burnaby, Canada, remote), April 2022 to present.
-  Works on Open Journal Systems (OJS), Open Monograph Press and Open Preprint
-  Systems.
+  **Full-time.** Works on Open Journal Systems (OJS), Open Monograph Press and
+  Open Preprint Systems.
 - **Lead Architect and Developer, Dentall Manager** (Netherlands, remote),
-  April 2023 to present. Leads a team of 8 engineers on a multi-tenant SaaS ERP.
+  April 2023 to present. **Part-time**, held alongside the PKP role. Leads a
+  team of 8 engineers on a multi-tenant SaaS ERP.
 
 ## Open source
 
@@ -60,10 +61,13 @@ Further detail:
 - 15+ years of professional software engineering, since September 2011.
 - Has led engineering teams since 2017, most recently a team of 8.
 - Previously Team Lead and Manager at Developer Squad (New York, 2020 to 2022),
-  where he owned delivery for client platforms generating close to US$500K per
-  month in combined revenue.
+  full-time, where he owned delivery for client platforms generating close to
+  US$500K per month in combined revenue.
 - Before that, Software Engineer through to Tech Team Lead and Manager at
-  Noobis, Inc. (Buffalo, New York, 2011 to 2019), delivering 80+ client projects.
+  Noobis, Inc. (Buffalo, New York, 2011 to 2019), full-time, delivering 80+
+  client projects.
+- Every role except Dentall Manager has been full-time. Dentall Manager is
+  part-time and runs alongside the full-time PKP role.
 - BSc in Computer Science and Engineering, Rajshahi University of Engineering
   and Technology (RUET), 2007 to 2011.
 - Certified Laravel Developer, April 2022.
