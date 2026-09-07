@@ -762,6 +762,19 @@ strong { color: var(--text); font-weight: 600; }
   margin-left: auto;
   font-variant-numeric: tabular-nums;
 }
+/* full-time or part-time, kept muted so it reads as a qualifier on the dates
+   rather than competing with them */
+.tl-type {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.05rem 0.5rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--faint);
+  vertical-align: 0.1em;
+}
 .tl-role { color: var(--muted); font-size: 0.95rem; margin-top: 0.15rem; }
 .tl-role b { color: var(--text); font-weight: 600; }
 .tl-note { margin-top: 0.75rem; color: var(--faint); font-size: 0.9rem; }

@@ -159,6 +159,9 @@
   box-shadow: 0 0 0 3px var(--accent-soft);
   vertical-align: 0.05em;
 }
+/* full-time or part-time. Two of the roles overlap in time, so the distinction
+   is the thing that makes the overlap make sense. */
+.entry-when .etype { display: block; margin-top: 0.35rem; color: var(--muted); }
 .entry h3 { font-size: 1.2rem; }
 .entry-org { margin-top: 0.3rem; color: var(--muted); font-size: 0.95rem; }
 .entry-org b { color: var(--text); font-weight: 600; }
@@ -284,6 +287,7 @@
   .os-cell .v { font-size: 10.5pt; margin-top: 0.2rem; }
 
   .entry { padding-block: 0.6rem; break-inside: avoid; page-break-inside: avoid; }
+  .entry-when .etype { margin-top: 0.2rem; }
   .entry h3 { font-size: 11pt; }
   .entry-org { margin-top: 0.2rem; font-size: 9pt; }
   .entry-note { margin-top: 0.45rem; font-size: 8.5pt; }
