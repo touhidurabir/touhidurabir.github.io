@@ -1,5 +1,5 @@
 /* ==========================================================================
-   cv.css — the CV page only. Loads after site.css and inherits every token
+   cv.css, the CV page only. Loads after site.css and inherits every token
    from it, so the two pages stay one design. Nothing here redefines a colour
    or a typeface.
 

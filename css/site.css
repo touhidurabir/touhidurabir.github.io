@@ -1,5 +1,5 @@
 /* ==========================================================================
-   touhidurabir.github.io — site.css
+   touhidurabir.github.io, site.css
    Dark editorial layout. One accent (teal). Thin rules, small radii,
    monospace labels, large display type. No decorative shadows.
    ========================================================================== */
@@ -434,7 +434,7 @@ strong { color: var(--text); font-weight: 600; }
 .portrait {
   position: relative;
   justify-self: center;
-  width: min(100%, 420px);
+  width: min(100%, 320px);
   aspect-ratio: 4 / 5;
   border-radius: var(--radius-lg);
   overflow: hidden;
