@@ -1,4 +1,4 @@
-/* site.js — nav, reveal-on-scroll, counters, rotator, project filter.
+/* site.js: nav, reveal-on-scroll, counters, rotator, project filter.
    No dependencies. */
 (function () {
 	'use strict';
