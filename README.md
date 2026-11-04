@@ -8,18 +8,18 @@ Source for my portfolio site, live at **[touhidurabir.github.io](https://touhidu
 
 ## About me
 
-I am Touhidur Rahman, a senior full-stack engineer based in Dhaka, Bangladesh, working mostly in Laravel, PHP and Vue. I have been writing software professionally since 2011 and leading engineering teams since 2017. Most of the work is backend: architecture, APIs, database design, testing, deployment, and the production support that follows.
+I am Touhidur Rahman, a senior full-stack engineer and tech lead based in Dhaka, Bangladesh, working mostly in Laravel, Vue.js and Node.js. I have been writing software professionally since 2011 and leading engineering teams since 2017. I am most at home owning a system end to end, from architecture and database design to deployment and the production support that follows.
 
 **Open Journal Systems, at the Public Knowledge Project (Simon Fraser University).**
-I am a core backend developer on OJS. It runs 58,000+ journals across 156 countries. I am among the top 10 all-time contributors to both [pkp/ojs](https://github.com/pkp/ojs/graphs/contributors?all=1) and [pkp/pkp-lib](https://github.com/pkp/pkp-lib/graphs/contributors?all=1), with 1,000+ merged commits across the PKP repositories.
+From 2022 to 2026 I was a core contributor to OJS, the publishing platform behind 58,000+ journals in 156 countries. I am among the top 10 all-time contributors to both [pkp/ojs](https://github.com/pkp/ojs/graphs/contributors?all=1) and [pkp/pkp-lib](https://github.com/pkp/pkp-lib/graphs/contributors?all=1), with 1,000+ merged commits across the PKP repositories.
 
 **Dentall Manager.**
 Lead architect and developer of a multi-tenant SaaS ERP for Dutch dental and medical practices, and head of the 8-person team that runs it.
 
 **Laravel packages.**
-15 published on [Packagist](https://packagist.org/packages/touhidurabir/), installed around 195,000 times between them. [laravel-stub-generator](https://packagist.org/packages/touhidurabir/laravel-stub-generator) accounts for about 175,000 of those. [laravel-model-sanitize](https://packagist.org/packages/touhidurabir/laravel-model-sanitize) was featured on [Laravel News](https://laravel-news.com/laravel-model-sanitize).
+15 published on [Packagist](https://packagist.org/packages/touhidurabir/), with 195k+ installs between them. [laravel-stub-generator](https://packagist.org/packages/touhidurabir/laravel-stub-generator) accounts for about 175,000 of those. [laravel-model-sanitize](https://packagist.org/packages/touhidurabir/laravel-model-sanitize) was featured on [Laravel News](https://laravel-news.com/laravel-model-sanitize).
 
-Certified Laravel Developer since April 2022. Open to remote roles worldwide, and to the right on-site role abroad with visa sponsorship. Full-time or contract.
+Certified Laravel Developer since April 2022. Open to senior, lead and full-stack roles, remote, full-time or contract.
 
 ## Find me
 

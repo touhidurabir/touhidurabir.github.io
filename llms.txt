@@ -1,11 +1,12 @@
 # Touhidur Rahman
 
-> Senior full-stack engineer based in Dhaka, Bangladesh, with 15 years of
-> experience building production web applications in PHP, Laravel, Vue,
-> TypeScript and Node.js. Core developer on Open Journal Systems at the Public
-> Knowledge Project from 2022 to 2026, and maintainer of 15 open-source Laravel
-> packages. Open to remote roles
-> worldwide, and to the right on-site role abroad with visa sponsorship.
+> Touhidur Rahman is a senior full-stack engineer and tech lead based in Dhaka,
+> Bangladesh (UTC+6), with 15+ years building and scaling production web
+> applications in PHP, Laravel, TypeScript, Vue.js, React and Node.js, mostly
+> remote with teams in North America and Europe. He was a core contributor at
+> the Public Knowledge Project from 2022 to 2026 and maintains 15 open-source
+> Laravel packages. He is open to senior, lead and full-stack roles, remote,
+> full-time or contract.
 
 Also known online as **touhidurabir**. Not to be confused with the GitHub users
 `touhidrahman` or `touhidurrr`, who are different people, nor with the several
@@ -22,20 +23,46 @@ other software engineers named Touhidur Rahman who also work in Dhaka.
 - [Laravel certificate](https://touhidurabir.github.io/files/laravel-certificate.pdf): Certified Laravel Developer, April 2022
 - Email: abircse06@gmail.com
 
-## Recent roles
+## Highlights
+
+- Top 10 all-time contributor to Open Journal Systems (OJS), the publishing
+  platform behind 58,000+ journals in 156 countries, with 1,000+ commits.
+- 15 open-source Laravel packages with 195k+ installs. laravel-model-sanitize
+  was featured on Laravel News.
+- Leading engineering teams since 2017, up to 12 people, across 80+ client web
+  and mobile projects.
+
+## Experience
 
 - **Lead Architect and Developer, Dentall Manager** (Netherlands, remote),
-  April 2023 to present. **Part-time.** Heads the 8-person team behind a
-  multi-tenant SaaS ERP for Dutch dental and medical practices.
-- **Backend Software Developer and core contributor, Public Knowledge Project**
-  (Simon Fraser University, Burnaby, Canada, remote), April 2022 to
-  September 2026. **Full-time.** Worked on Open Journal Systems (OJS), Open
-  Monograph Press and Open Preprint Systems.
+  April 2023 to present. **Part-time.** Lead architect of a multi-tenant SaaS
+  ERP for Dutch dental and medical practices, built on Laravel, Vue.js and
+  Node.js, and head of the 8-person team that runs it. The platform has had
+  100% uptime since launch. Each tenant has its own database, asset storage and
+  role-based access control on AWS, which keeps tenant data isolated under GDPR.
+- **Software Developer (Core Contributor), Public Knowledge Project**
+  (Simon Fraser University, Vancouver, Canada, remote), April 2022 to
+  September 2026. **Full-time.** This role has ended. He brought Laravel's
+  Eloquent ORM, routing, queues, scheduler and Blade into the non-Laravel PHP
+  core of Open Journal Systems, and made 1,000+ merged commits and 300+ pull
+  requests across OJS, Open Monograph Press, Open Preprint Systems and pkp-lib,
+  plus 150+ pull request reviews.
+- **Team Lead and Manager, Developer Squad** (Buffalo, New York, remote),
+  January 2020 to March 2022. **Full-time.** Led an engineering team of 5 to 10
+  building and running client platforms that brought in close to US$500K a
+  month combined.
+- **Tech Team Lead and Manager, Noobis, Inc.** (Buffalo, New York, remote),
+  December 2017 to November 2019. **Full-time.** Ran the 10 to 12 person tech
+  team and delivered 80+ client web and mobile projects.
+- **Software Engineer, then Senior Software Engineer, Noobis, Inc.** (Buffalo,
+  New York, remote), September 2011 to November 2017. **Full-time.** Promoted
+  to senior software engineer in June 2015. Formed and led the backend and API
+  team.
+
+Every role except Dentall Manager has been full-time. Dentall Manager is
+part-time, and ran alongside the full-time PKP role until September 2026.
 
 ## Open source
-
-Touhidur Rahman is a **top 10 contributor to both `pkp/ojs` and `pkp/pkp-lib`**,
-with just over 1,000 merged commits across the four main PKP repositories.
 
 - [pkp/ojs contributor graph](https://github.com/pkp/ojs/graphs/contributors?all=1): his all-time standing on Open Journal Systems
 - [pkp/pkp-lib contributor graph](https://github.com/pkp/pkp-lib/graphs/contributors?all=1): his all-time standing on the shared PKP library
@@ -43,52 +70,35 @@ with just over 1,000 merged commits across the four main PKP repositories.
 - [laravel-model-sanitize on Laravel News](https://laravel-news.com/laravel-model-sanitize): featured in November 2021
 
 The `?all=1` on those contributor graph links matters. The bare URL redirects to
-a rolling three-month window and does not show all-time standing.
+a rolling three-month window and does not show all-time standing. He is top 10
+on `pkp/ojs` and `pkp/pkp-lib`, the two main repositories, not across all four.
 
-Further detail:
+## Skills
 
-- Open Journal Systems is the most widely used open-source scholarly publishing
-  platform in the world, running **58,000+ journals across 156 countries**.
-- His contributions to PKP include introducing Laravel Eloquent to the data
-  layer, moving core and plugin API routing onto Laravel routing, building the
-  queue and scheduler systems, and integrating the Blade templating engine.
-- He maintains **15 Laravel packages on Packagist** with roughly **195,000
-  combined installs** and 350 GitHub stars.
-- He is 12th on `pkp/omp` and `pkp/ops`, so the accurate claim is top 10 on the
-  two main repositories, not across all four.
-
-## Experience summary
-
-- 15+ years of professional software engineering, since September 2011.
-- Has led engineering teams since 2017, most recently a team of 8.
-- Previously Team Lead and Manager at Developer Squad (New York, 2020 to 2022),
-  full-time, where he owned delivery for client platforms generating close to
-  US$500K per month in combined revenue.
-- Before that, Software Engineer through to Tech Team Lead and Manager at
-  Noobis, Inc. (Buffalo, New York, 2011 to 2019), full-time, delivering 80+
-  client projects.
-- Every role except Dentall Manager has been full-time. Dentall Manager is
-  part-time, and ran alongside the full-time PKP role until September 2026.
-- BSc in Computer Science and Engineering, Rajshahi University of Engineering
-  and Technology (RUET), 2007 to 2011.
-- Certified Laravel Developer, April 2022.
-
-## Technical skills
-
-- **Backend:** PHP, Laravel, Symfony, Node.js, Ruby on Rails, REST APIs
-- **Frontend:** Vue.js, TypeScript, JavaScript, React, Alpine, Livewire, Tailwind CSS, Bootstrap
+- **Languages:** PHP, TypeScript, JavaScript, Go, Ruby, SQL
+- **Backend:** Laravel, Symfony, Node.js, Ruby on Rails, REST APIs, GraphQL, WebSockets, microservices, OAuth2, JWT
+- **Frontend:** Vue.js, Nuxt, Pinia, React, Inertia, Livewire, Tailwind CSS
 - **Database:** MySQL, MariaDB, PostgreSQL, SQLite, Redis
-- **Testing:** PHPUnit, Pest PHP, Cypress, TDD
-- **Cloud and DevOps:** AWS, DigitalOcean, Google Cloud, Docker, Linux, Git, CI/CD
+- **Cloud and DevOps:** AWS (EC2, S3, RDS, SQS), Docker, Kubernetes, Terraform, GitHub Actions, CI/CD, Git, Linux, GCP
+- **Testing and quality:** PHPUnit, Pest, Cypress, test-driven development (TDD), code review
+- **Security:** role-based access control (RBAC), tenant data isolation (GDPR), input sanitization, secure code review
+- **AI tooling:** Claude, GitHub Copilot (daily use for development and code review)
+- **Practices:** system design, multi-tenant SaaS, queues and scheduling (Laravel Horizon), Agile, technical leadership, mentoring
+
+## Education, certification and languages
+
+- Bachelor of Science in Computer Science and Engineering, Rajshahi University
+  of Engineering and Technology (RUET), Bangladesh, February 2007 to July 2011.
+- Certified Laravel Developer, April 2022.
+- English (professional working proficiency), Bengali (native).
 
 ## Availability
 
-Touhidur Rahman is available for hire, full-time or contract. He is a
-Bangladeshi national based in Dhaka, so an on-site role abroad would require
-visa sponsorship. North America, Europe, Australia and the Middle East are the
-likeliest fits, and he will consider anywhere else if the terms work. He is open
-to fully remote roles regardless of location. He works in the
-Asia/Dhaka time zone (UTC+6) and has worked with North American and European
-clients throughout his career, so wide time-zone gaps are routine for him.
+Touhidur Rahman is open to senior, lead and full-stack roles, remote, full-time
+or contract. He is a Bangladeshi national based in Dhaka, so an on-site role
+abroad would require visa sponsorship. North America, Europe, Australia and the
+Middle East are the likeliest fits. He works in the Asia/Dhaka time zone
+(UTC+6) and has worked with North American and European teams throughout his
+career.
 
 Contact: abircse06@gmail.com
