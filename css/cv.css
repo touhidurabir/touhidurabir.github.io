@@ -168,7 +168,6 @@
 /* employer and university names link out to their own sites */
 .entry-org a { border-bottom: 1px solid var(--line-strong); }
 .entry-org a:hover { border-color: var(--accent-fg); }
-.entry-note { margin-top: 0.85rem; color: var(--faint); font-size: 0.9rem; }
 .entry .link-arrow { margin-top: 1rem; }
 
 /* bullets: same hairline dash as the portfolio timeline */
@@ -255,8 +254,7 @@
   .cv-head::before,
   .site-foot,
   .spans,
-  .span-scale,
-  .no-print { display: none !important; }
+  .span-scale { display: none !important; }
 
   /* the reveal animation leaves everything at opacity 0 until it scrolls into
      view, and print never scrolls */
@@ -290,7 +288,6 @@
   .entry-when .etype { margin-top: 0.2rem; }
   .entry h3 { font-size: 11pt; }
   .entry-org { margin-top: 0.2rem; font-size: 9pt; }
-  .entry-note { margin-top: 0.45rem; font-size: 8.5pt; }
   .bullets { margin-top: 0.5rem; gap: 0.28rem; }
   .bullets li { font-size: 9pt; }
   .deflist > div { padding: 0.4rem 0.6rem; }
