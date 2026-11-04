@@ -719,6 +719,8 @@ strong { color: var(--text); font-weight: 600; }
 .project-body .link-arrow.is-disabled { color: var(--faint); pointer-events: none; }
 .project-title-link::after { content: ""; position: absolute; inset: 0; }
 .project-body .link-arrow, .project-tags { position: relative; z-index: 1; }
+/* the card label is not a link itself, so let taps fall through to the card */
+.project-body span.link-arrow { pointer-events: none; }
 
 /* ---- experience ---- */
 .xp-grid {
@@ -917,9 +919,9 @@ footer.site-foot a:hover { color: var(--accent-fg); }
    without changing how they look: an invisible box centred on the element. */
 @media (pointer: coarse) {
   .theme-toggle, .nav-toggle { width: 44px; height: 44px; }
-  .brand, .link-arrow, .filter, .pkg a, .site-foot a, .tl-head h3 a,
+  .brand, a.link-arrow, .filter, .pkg a, .site-foot a, .tl-head h3 a,
   .contact-email, .os-cell a, .entry-org a, .deflist .t a { position: relative; }
-  .brand::before, .link-arrow::before, .filter::before, .pkg a::before,
+  .brand::before, a.link-arrow::before, .filter::before, .pkg a::before,
   .site-foot a::before, .tl-head h3 a::before, .contact-email::before,
   .os-cell a::before, .entry-org a::before, .deflist .t a::before {
     content: "";
