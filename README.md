@@ -2,7 +2,7 @@
 
 Source for my portfolio site, live at **[touhidurabir.github.io](https://touhidurabir.github.io)**.
 
-[Read the CV online](https://touhidurabir.github.io/cv.html) &middot; [Download the CV as PDF](https://touhidurabir.github.io/files/resume.pdf)
+[Read the CV online](https://touhidurabir.github.io/cv.html) &middot; [Download the résumé as PDF](https://touhidurabir.github.io/files/Touhidur_Rahman_Resume.pdf)
 
 ---
 
@@ -26,7 +26,7 @@ Certified Laravel Developer since April 2022. Open to remote roles worldwide, an
 | | |
 | --- | --- |
 | Portfolio | [touhidurabir.github.io](https://touhidurabir.github.io) |
-| CV | [read online](https://touhidurabir.github.io/cv.html) &middot; [download PDF](https://touhidurabir.github.io/files/resume.pdf) |
+| CV | [read online](https://touhidurabir.github.io/cv.html) &middot; [download résumé (PDF)](https://touhidurabir.github.io/files/Touhidur_Rahman_Resume.pdf) |
 | GitHub | [@touhidurabir](https://github.com/touhidurabir) |
 | Packagist | [touhidurabir](https://packagist.org/packages/touhidurabir/) |
 | LinkedIn | [in/touhidur](https://www.linkedin.com/in/touhidur) |

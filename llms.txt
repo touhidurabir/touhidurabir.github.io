@@ -15,7 +15,7 @@ other software engineers named Touhidur Rahman who also work in Dhaka.
 
 - [Website](https://touhidurabir.github.io/): portfolio, work history, projects and contact details
 - [Full CV in HTML](https://touhidurabir.github.io/cv.html): the complete CV as a crawlable page
-- [Full CV as PDF](https://touhidurabir.github.io/files/resume.pdf): the same CV as a download
+- [Résumé as PDF](https://touhidurabir.github.io/files/Touhidur_Rahman_Resume.pdf): the résumé as a download
 - [GitHub](https://github.com/touhidurabir): open-source packages and contribution history
 - [LinkedIn](https://www.linkedin.com/in/touhidur): professional profile
 - [Packagist](https://packagist.org/packages/touhidurabir/): the 15 published Laravel packages
