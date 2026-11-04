@@ -38,7 +38,9 @@
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+	<!-- fonts load without blocking first paint; display=swap covers the gap -->
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"></noscript>
 	<script>
 		/* apply a saved theme before first paint to avoid a flash */
 		(function () {
@@ -48,8 +50,8 @@
 			} catch (e) {}
 		})();
 	</script>
-	<link rel="stylesheet" href="css/site.css?v=10">
-	<link rel="stylesheet" href="css/cv.css?v=4">
+	<link rel="stylesheet" href="css/site.css?v=11">
+	<link rel="stylesheet" href="css/cv.css?v=5">
 
 	<!-- structured data -->
 	<script type="application/ld+json">

@@ -39,7 +39,9 @@
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+	<!-- fonts load without blocking first paint; display=swap covers the gap -->
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"></noscript>
 	<script>
 		/* apply a saved theme before first paint to avoid a flash */
 		(function () {
@@ -49,7 +51,7 @@
 			} catch (e) {}
 		})();
 	</script>
-	<link rel="stylesheet" href="css/site.css?v=10">
+	<link rel="stylesheet" href="css/site.css?v=11">
 
 		<!-- structured data -->
 	<script type="application/ld+json">
@@ -291,8 +293,8 @@
 						</div>
 					</div>
 
-					<figure class="portrait reveal" data-delay="1">
-						<img src="img/me-1.webp" alt="Touhidur Rahman" width="420" height="525" fetchpriority="high">
+					<figure class="portrait">
+						<img src="img/me-1.webp" alt="Touhidur Rahman, senior full-stack engineer" width="660" height="880" fetchpriority="high">
 						<figcaption class="portrait-tag"><b>Touhidur Rahman</b><span>Laravel · Vue · Node</span></figcaption>
 					</figure>
 				</div>
@@ -481,7 +483,7 @@
 
 				<div class="projects" id="projects">
 					<article class="project is-featured reveal" data-tags="laravel php vue">
-						<div class="project-media"><img src="img/works/thumbnail/dentallmanager.webp" alt="Dentall Manager, a multi-tenant ERP for dental and medical practices" loading="lazy" width="800" height="450"></div>
+						<div class="project-media"><img src="img/works/thumbnail/dentallmanager.webp" alt="Dentall Manager, a multi-tenant ERP for dental and medical practices" loading="lazy" width="600" height="330"></div>
 						<div class="project-body">
 							<div class="project-tags"><span>Laravel</span><span>Vue</span><span>Node</span></div>
 							<h3><a class="project-title-link" href="https://dentallmanager.nl/" target="_blank" rel="noopener">Dentall Manager</a></h3>
@@ -490,7 +492,7 @@
 						</div>
 					</article>
 					<article class="project is-featured reveal" data-delay="1" data-tags="opensource php laravel vue">
-						<div class="project-media"><img src="img/works/thumbnail/ojs.webp" alt="Open Journal Systems, open-source scholarly publishing platform" loading="lazy" width="800" height="450"></div>
+						<div class="project-media"><img src="img/works/thumbnail/ojs.webp" alt="Open Journal Systems, open-source scholarly publishing platform" loading="lazy" width="600" height="316"></div>
 						<div class="project-body">
 							<div class="project-tags"><span>PHP</span><span>Laravel</span><span>Vue</span><span>Open source</span></div>
 							<h3><a class="project-title-link" href="https://github.com/pkp/ojs" target="_blank" rel="noopener">Open Journal Systems</a></h3>
@@ -500,7 +502,7 @@
 					</article>
 
 					<article class="project reveal" data-tags="wordpress php">
-						<div class="project-media"><img src="img/works/thumbnail/mitragaia.webp" alt="Mitragaia e-commerce store" loading="lazy" width="640" height="400"></div>
+						<div class="project-media"><img src="img/works/thumbnail/mitragaia.webp" alt="Mitragaia e-commerce store" loading="lazy" width="600" height="326"></div>
 						<div class="project-body">
 							<div class="project-tags"><span>WordPress</span><span>PHP</span></div>
 							<h3><a class="project-title-link" href="https://mitragaia.com/" target="_blank" rel="noopener">Mitragaia</a></h3>
@@ -509,7 +511,7 @@
 						</div>
 					</article>
 					<article class="project reveal" data-delay="1" data-tags="laravel php vue">
-						<div class="project-media"><img src="img/works/thumbnail/serlock-integrated.webp" alt="Serlock Integrated web application" loading="lazy" width="640" height="400"></div>
+						<div class="project-media"><img src="img/works/thumbnail/serlock-integrated.webp" alt="Serlock Integrated web application" loading="lazy" width="600" height="341"></div>
 						<div class="project-body">
 							<div class="project-tags"><span>Laravel</span><span>Vue</span></div>
 							<h3>Serlock Integrated</h3>
@@ -518,7 +520,7 @@
 						</div>
 					</article>
 					<article class="project reveal" data-delay="2" data-tags="rails ruby">
-						<div class="project-media"><img src="img/works/thumbnail/lawmaker.webp" alt="LawMaker legislative tracking platform" loading="lazy" width="640" height="400"></div>
+						<div class="project-media"><img src="img/works/thumbnail/lawmaker.webp" alt="LawMaker legislative tracking platform" loading="lazy" width="600" height="341"></div>
 						<div class="project-body">
 							<div class="project-tags"><span>Ruby on Rails</span></div>
 							<h3><a class="project-title-link" href="https://lawmaker.io/" target="_blank" rel="noopener">LawMaker</a></h3>
@@ -527,7 +529,7 @@
 						</div>
 					</article>
 					<article class="project reveal" data-tags="wordpress laravel php">
-						<div class="project-media"><img src="img/works/thumbnail/buffalocitymission.webp" alt="Buffalo City Mission website" loading="lazy" width="640" height="400"></div>
+						<div class="project-media"><img src="img/works/thumbnail/buffalocitymission.webp" alt="Buffalo City Mission website" loading="lazy" width="600" height="339"></div>
 						<div class="project-body">
 							<div class="project-tags"><span>Laravel</span><span>WordPress</span><span>PHP</span></div>
 							<h3><a class="project-title-link" href="https://www.buffalocitymission.org/" target="_blank" rel="noopener">Buffalo City Mission</a></h3>
@@ -536,7 +538,7 @@
 						</div>
 					</article>
 					<article class="project reveal" data-delay="1" data-tags="laravel php">
-						<div class="project-media"><img src="img/works/thumbnail/trustos.webp" alt="TrustOS platform" loading="lazy" width="640" height="400"></div>
+						<div class="project-media"><img src="img/works/thumbnail/trustos.webp" alt="TrustOS platform" loading="lazy" width="600" height="337"></div>
 						<div class="project-body">
 							<div class="project-tags"><span>Laravel</span><span>PHP</span></div>
 							<h3><a class="project-title-link" href="https://trustos.org/" target="_blank" rel="noopener">TrustOS</a></h3>
@@ -545,7 +547,7 @@
 						</div>
 					</article>
 					<article class="project reveal" data-delay="2" data-tags="laravel php">
-						<div class="project-media"><img src="img/works/thumbnail/readntmeter.webp" alt="ReadNtMeter utility metering application" loading="lazy" width="640" height="400"></div>
+						<div class="project-media"><img src="img/works/thumbnail/readntmeter.webp" alt="ReadNtMeter utility metering application" loading="lazy" width="600" height="425"></div>
 						<div class="project-body">
 							<div class="project-tags"><span>Laravel</span><span>PHP</span></div>
 							<h3><a class="project-title-link" href="https://www.readntmeter.com/" target="_blank" rel="noopener">ReadNtMeter</a></h3>
@@ -554,7 +556,7 @@
 						</div>
 					</article>
 					<article class="project reveal" data-tags="wordpress php laravel">
-						<div class="project-media"><img src="img/works/thumbnail/americasnextinvestment.webp" alt="Americas Next Investment website" loading="lazy" width="640" height="400"></div>
+						<div class="project-media"><img src="img/works/thumbnail/americasnextinvestment.webp" alt="Americas Next Investment website" loading="lazy" width="600" height="314"></div>
 						<div class="project-body">
 							<div class="project-tags"><span>WordPress</span><span>React</span><span>Laravel</span></div>
 							<h3><a class="project-title-link" href="https://americasnextinvestment.com/" target="_blank" rel="noopener">Americas Next Investment</a></h3>
