@@ -14,7 +14,7 @@ I am Touhidur Rahman, a senior full-stack engineer based in Dhaka, Bangladesh, w
 I am a core backend developer on OJS. It runs 58,000+ journals across 156 countries. I am among the top 10 all-time contributors to both [pkp/ojs](https://github.com/pkp/ojs/graphs/contributors?all=1) and [pkp/pkp-lib](https://github.com/pkp/pkp-lib/graphs/contributors?all=1), with 1,000+ merged commits across the PKP repositories.
 
 **Dentall Manager.**
-Lead architect and developer of a multi-tenant SaaS ERP used by 50+ dental and medical clinics in the Netherlands, built and run with a team of eight engineers.
+Lead architect and developer of a multi-tenant SaaS ERP for Dutch dental and medical practices, and head of the 8-person team that runs it.
 
 **Laravel packages.**
 15 published on [Packagist](https://packagist.org/packages/touhidurabir/), installed around 195,000 times between them. [laravel-stub-generator](https://packagist.org/packages/touhidurabir/laravel-stub-generator) accounts for about 175,000 of those. [laravel-model-sanitize](https://packagist.org/packages/touhidurabir/laravel-model-sanitize) was featured on [Laravel News](https://laravel-news.com/laravel-model-sanitize).

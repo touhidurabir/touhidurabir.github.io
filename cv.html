@@ -174,7 +174,7 @@
 					<p class="cv-role">Senior Full-Stack Engineer &middot; PHP, Laravel, Vue, TypeScript, Node.js</p>
 
 					<div class="cv-lede">
-						<p>I am a full-stack software engineer based in Dhaka, Bangladesh, with 15 years of professional experience building production web applications and leading engineering teams since 2017. I lead the architecture of a multi-tenant clinic ERP in the Netherlands, spent four years as a core developer on Open Journal Systems at the Public Knowledge Project, and maintain 15 open-source Laravel packages.</p>
+						<p>I am a full-stack software engineer based in Dhaka, Bangladesh, with 15 years of professional experience building production web applications and leading engineering teams since 2017. I lead the architecture of a multi-tenant ERP for Dutch dental and medical practices, spent four years as a core developer on Open Journal Systems at the Public Knowledge Project, and maintain 15 open-source Laravel packages.</p>
 						<p>Most of my work is backend: architecture, APIs, database design, testing, deployment, and the production support that follows. I have worked with North American and European clients throughout my career, remotely, across wide time-zone gaps.</p>
 					</div>
 
@@ -293,9 +293,11 @@
 							<h3>Lead Architect &amp; Developer</h3>
 							<p class="entry-org"><b><a href="https://dentallmanager.nl/" target="_blank" rel="noopener">Dentall Manager</a></b> &middot; Netherlands (Remote)</p>
 							<ul class="bullets">
-								<li>Lead the architecture and development of a multi-tenant SaaS ERP platform now serving <b>50+ dental and medical clinics</b> across the Netherlands, built on Laravel, Vue and Node.</li>
-								<li>Tech lead for a <b>team of 8 engineers</b>. Designed the tenancy model, RBAC and core domain modules for clinic operations and billing.</li>
-								<li>Manage and own the full technical stack, from system design and database schema to REST APIs, deployment and production support, on a platform handling <b>patient data under GDPR</b>.</li>
+								<li>Lead architect of a <b>multi-tenant SaaS ERP for Dutch dental and medical practices</b>, built on Laravel, Vue.js and Node.js, and head of the <b>8-person team</b> that runs it.</li>
+								<li><b>100% uptime</b> since launch, serving thousands of users across all tenants.</li>
+								<li>Database-per-tenant design on AWS, with separate databases, asset storage and role-based access control (RBAC) for each tenant, keeps all tenant data <b>isolated under GDPR</b>.</li>
+								<li>Built a workflow engine where tenant admins define their own triggers and conditions. It compiles them into queries at runtime, so process changes no longer need an engineering ticket.</li>
+								<li>Billing runs on Stripe. Queues, sessions and caching run on Redis under Laravel Horizon.</li>
 							</ul>
 						</div>
 					</article>
@@ -365,7 +367,7 @@
 				<ul class="bullets reveal" style="max-width:80ch">
 					<li>Top 10 contributor to both <a href="https://github.com/pkp/ojs/graphs/contributors?all=1" target="_blank" rel="noopener">pkp/ojs</a> and <a href="https://github.com/pkp/pkp-lib/graphs/contributors?all=1" target="_blank" rel="noopener">pkp/pkp-lib</a>, with just over 1,000 merged commits across the four main PKP repositories. Also maintain <b>15 Laravel packages on Packagist</b> with 195k+ combined installs, one of which, laravel-model-sanitize, was <a href="https://laravel-news.com/laravel-model-sanitize" target="_blank" rel="noopener">featured on Laravel News</a>.</li>
 					<li>Have led engineering teams of up to 12 people since 2017 across three organizations, delivering 80+ client projects from scoping through release.</li>
-					<li>Designed multi-tenant SaaS and ERP platforms from the ground up, including the one now used by 50+ clinics in the Netherlands.</li>
+					<li>Designed multi-tenant SaaS and ERP platforms from the ground up, including one for Dutch dental and medical practices with a separate database for every tenant.</li>
 					<li>Shipped and supported production applications on Laravel, Vue, Rails and React, from greenfield builds to performance work and long-term maintenance.</li>
 				</ul>
 			</div>
@@ -428,7 +430,7 @@
 					</div>
 					<div>
 						<div class="t"><a href="https://dentallmanager.nl/" target="_blank" rel="noopener">dentallmanager.nl</a></div>
-						<div class="d">Laravel, Vue, Node. Multi-tenant clinic ERP, lead architect.</div>
+						<div class="d">Laravel, Vue.js, Node.js. Multi-tenant ERP for dental and medical practices, lead architect.</div>
 					</div>
 					<div>
 						<div class="t"><a href="https://mitragaia.com/" target="_blank" rel="noopener">mitragaia.com</a></div>

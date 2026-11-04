@@ -205,7 +205,7 @@
 						"name": "What does Touhidur Rahman work on?",
 						"acceptedAnswer": {
 							"@type": "Answer",
-							"text": "Mostly backend, across PHP, Laravel, Vue, TypeScript and Node.js. He leads the architecture of Dentall Manager, a multi-tenant SaaS ERP used by 50+ clinics in the Netherlands. From 2022 to 2026 he was a core developer on Open Journal Systems at the Public Knowledge Project, which runs 58,000+ journals across 156 countries, and he is among the top 10 contributors to both the OJS codebase and pkp-lib. He also maintains 15 Laravel packages with around 195,000 combined installs."
+							"text": "Mostly backend, across PHP, Laravel, Vue, TypeScript and Node.js. He is lead architect of Dentall Manager, a multi-tenant SaaS ERP for Dutch dental and medical practices, and heads the 8-person team that runs it. From 2022 to 2026 he was a core developer on Open Journal Systems at the Public Knowledge Project, which runs 58,000+ journals across 156 countries, and he is among the top 10 contributors to both the OJS codebase and pkp-lib. He also maintains 15 Laravel packages with around 195,000 combined installs."
 						}
 					}
 				]
@@ -313,7 +313,7 @@
 				<div class="reveal" data-delay="1">
 					<div class="prose">
 						<p>Full-stack software engineer based in Dhaka, with 15 years of professional experience building production web applications and leading engineering teams since 2017.</p>
-						<p>I lead the architecture of <a href="https://dentallmanager.nl/" target="_blank" rel="noopener">Dentall Manager</a>, a multi-tenant SaaS ERP used by 50+ dental and medical clinics in the Netherlands, with a team of eight engineers.</p>
+						<p>I lead the architecture of <a href="https://dentallmanager.nl/" target="_blank" rel="noopener">Dentall Manager</a>, a multi-tenant SaaS ERP for Dutch dental and medical practices, and head the 8-person team that runs it. It has had 100% uptime since launch and serves thousands of users across its tenants.</p>
 						<p>From April 2022 to September 2026 I was a core developer at the <a href="https://pkp.sfu.ca/" target="_blank" rel="noopener">Public Knowledge Project</a> at Simon Fraser University, working on Open Journal Systems. OJS runs 58,000+ journals across 156 countries, so changes land in front of a very large installed base. I am among the top 10 contributors to both the OJS codebase and pkp-lib.</p>
 						<p>I maintain 15 open-source Laravel packages, installed around 195,000 times between them. One of them, laravel-model-sanitize, was featured on Laravel News.</p>
 						<p>I have worked with North American and European clients throughout my career, remotely, across wide time-zone gaps. I am open to remote roles anywhere, and to the right on-site role abroad with visa sponsorship.</p>
@@ -391,7 +391,7 @@
 					<li class="reveal">
 						<span class="idx">02</span>
 						<h3>Multi-tenant SaaS</h3>
-						<p>I designed the tenancy model, RBAC and core domain modules for a clinic ERP now used by 50+ practices in the Netherlands. That means I have already met the parts that get hard later: data isolation, per-tenant migrations, billing, and the obligations that come with handling patient data under GDPR.</p>
+						<p>Dentall Manager, an ERP for Dutch dental and medical practices, gives every tenant its own database, asset storage and role-based access control on AWS, which keeps tenant data isolated under GDPR. Tenant admins define their own workflow triggers and conditions, and the engine compiles them into queries at runtime, so a process change no longer waits on an engineering ticket.</p>
 					</li>
 					<li class="reveal">
 						<span class="idx">03</span>
@@ -466,11 +466,11 @@
 
 				<div class="projects" id="projects">
 					<article class="project is-featured reveal" data-tags="laravel php vue">
-						<div class="project-media"><img src="img/works/thumbnail/dentallmanager.webp" alt="Dentall Manager, a multi-tenant clinic ERP" loading="lazy" width="800" height="450"></div>
+						<div class="project-media"><img src="img/works/thumbnail/dentallmanager.webp" alt="Dentall Manager, a multi-tenant ERP for dental and medical practices" loading="lazy" width="800" height="450"></div>
 						<div class="project-body">
 							<div class="project-tags"><span>Laravel</span><span>Vue</span><span>Node</span></div>
 							<h3><a class="project-title-link" href="https://dentallmanager.nl/" target="_blank" rel="noopener">Dentall Manager</a></h3>
-							<p>Multi-tenant SaaS ERP for 50+ dental and medical clinics in the Netherlands. I lead the architecture. Stack: Laravel, Vue, Node.</p>
+							<p>Multi-tenant SaaS ERP for Dutch dental and medical practices, with a separate database for every tenant. Lead architect. Stack: Laravel, Vue.js, Node.js.</p>
 							<span class="link-arrow">View live app <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
 						</div>
 					</article>
@@ -566,9 +566,11 @@
 							<div class="tl-head"><h3><a href="https://dentallmanager.nl/" target="_blank" rel="noopener">Dentall Manager</a></h3><span class="tl-date">Apr 2023 &ndash; Present<span class="tl-type">Part-time</span></span></div>
 							<p class="tl-role"><b>Lead Architect &amp; Developer</b> · Netherlands (Remote)</p>
 							<ul class="tl-bullets">
-								<li>Lead the architecture and development of a multi-tenant SaaS ERP platform now serving 50+ dental and medical clinics across the Netherlands, built on Laravel, Vue and Node.</li>
-								<li>Tech lead for a team of 8 engineers. Designed the tenancy model, RBAC and core domain modules for clinic operations and billing.</li>
-								<li>Manage and own the full technical stack, from system design and database schema to REST APIs, deployment and production support, on a platform handling patient data under GDPR.</li>
+								<li>Lead architect of a multi-tenant SaaS ERP for Dutch dental and medical practices, built on Laravel, Vue.js and Node.js, and head of the 8-person team that runs it.</li>
+								<li>100% uptime since launch, serving thousands of users across all tenants.</li>
+								<li>Database-per-tenant design on AWS, with separate databases, asset storage and role-based access control (RBAC) for each tenant, keeps all tenant data isolated under GDPR.</li>
+								<li>Built a workflow engine where tenant admins define their own triggers and conditions. It compiles them into queries at runtime, so process changes no longer need an engineering ticket.</li>
+								<li>Billing runs on Stripe. Queues, sessions and caching run on Redis under Laravel Horizon.</li>
 							</ul>
 						</article>
 						<article class="tl-item reveal">

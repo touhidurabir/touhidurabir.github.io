@@ -25,8 +25,8 @@ other software engineers named Touhidur Rahman who also work in Dhaka.
 ## Recent roles
 
 - **Lead Architect and Developer, Dentall Manager** (Netherlands, remote),
-  April 2023 to present. **Part-time.** Leads a team of 8 engineers on a
-  multi-tenant SaaS ERP.
+  April 2023 to present. **Part-time.** Heads the 8-person team behind a
+  multi-tenant SaaS ERP for Dutch dental and medical practices.
 - **Backend Software Developer and core contributor, Public Knowledge Project**
   (Simon Fraser University, Burnaby, Canada, remote), April 2022 to
   September 2026. **Full-time.** Worked on Open Journal Systems (OJS), Open
