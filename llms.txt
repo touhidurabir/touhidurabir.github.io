@@ -25,7 +25,7 @@ other software engineers named Touhidur Rahman who also work in Dhaka.
 
 ## Highlights
 
-- Top 10 all-time contributor to Open Journal Systems (OJS), the publishing
+- Top contributor to Open Journal Systems (OJS), the publishing
   platform behind 58,000+ journals in 156 countries, with 1,000+ commits.
 - 15 open-source Laravel packages with 195k+ installs. laravel-model-sanitize
   was featured on Laravel News.
@@ -70,8 +70,9 @@ part-time, and ran alongside the full-time PKP role until September 2026.
 - [laravel-model-sanitize on Laravel News](https://laravel-news.com/laravel-model-sanitize): featured in November 2021
 
 The `?all=1` on those contributor graph links matters. The bare URL redirects to
-a rolling three-month window and does not show all-time standing. He is top 10
-on `pkp/ojs` and `pkp/pkp-lib`, the two main repositories, not across all four.
+a rolling three-month window and does not show all-time standing. He is among
+the top contributors on `pkp/ojs` and `pkp/pkp-lib`, the two main repositories,
+not across all four.
 
 ## Skills
 
