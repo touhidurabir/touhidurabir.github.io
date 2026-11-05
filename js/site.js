@@ -1,4 +1,4 @@
-/* site.js: nav, reveal-on-scroll, counters, rotator, project filter.
+/* site.js: nav, reveal-on-scroll, counters, rotator.
    No dependencies. */
 (function () {
 	'use strict';
@@ -68,6 +68,8 @@
 	var menu = document.getElementById('mobile-menu');
 	function setMenu(open) {
 		menu.classList.toggle('is-open', open);
+		// keep the page underneath still while the menu covers it
+		document.documentElement.style.overflow = open ? 'hidden' : '';
 		toggle.setAttribute('aria-expanded', String(open));
 		toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
 	}
@@ -115,42 +117,54 @@
 		counters.forEach(function (el) { cio.observe(el); });
 	}
 
-	/* ---- rotating phrase in the hero ---- */
-	var word = document.querySelector('.rotator .word');
+	/* ---- rotating phrase in the hero ----
+	   Decorative: screen readers get the static sentence beside it instead.
+	   It types through every phrase once and comes to rest on the first, and
+	   the pause button stops it at any point (WCAG 2.2.2). Under reduced
+	   motion it never starts. */
+	var rotator = document.querySelector('.rotator');
+	var word = rotator && rotator.querySelector('.word');
+	var pauseBtn = rotator && rotator.querySelector('.rotator-toggle');
 	if (word && !reduceMotion) {
 		var phrases = [];
 		try { phrases = JSON.parse(word.getAttribute('data-rotate')) || []; } catch (e) { phrases = []; }
 		if (phrases.length > 1) {
-			var idx = 0, txt = '', deleting = false;
+			var idx = 0, txt = phrases[0], deleting = true, paused = false, timer = null, done = false;
+			function finish() {
+				done = true;
+				clearTimeout(timer);
+				word.textContent = phrases[0];
+				rotator.classList.add('is-done');
+				if (pauseBtn) pauseBtn.hidden = true;
+			}
 			function tick() {
+				if (paused || done) return;
 				var full = phrases[idx];
 				txt = deleting ? full.slice(0, txt.length - 1) : full.slice(0, txt.length + 1);
 				word.textContent = txt;
 				var delay = deleting ? 35 : 55;
-				if (!deleting && txt === full) { delay = 2200; deleting = true; }
-				else if (deleting && txt === '') { deleting = false; idx = (idx + 1) % phrases.length; delay = 400; }
-				setTimeout(tick, delay);
+				if (!deleting && txt === full) {
+					if (idx === 0) { finish(); return; }   // back to the first phrase: one full cycle done
+					delay = 2200; deleting = true;
+				} else if (deleting && txt === '') {
+					deleting = false; idx = (idx + 1) % phrases.length; delay = 400;
+				}
+				timer = setTimeout(tick, delay);
 			}
-			setTimeout(tick, 2200);
+			if (pauseBtn) {
+				pauseBtn.hidden = false;
+				pauseBtn.addEventListener('click', function () {
+					paused = !paused;
+					pauseBtn.setAttribute('aria-pressed', String(paused));
+					pauseBtn.setAttribute('aria-label', paused ? 'Resume the typing animation' : 'Pause the typing animation');
+					rotator.classList.toggle('is-paused', paused);
+					if (!paused) timer = setTimeout(tick, 300);
+					else clearTimeout(timer);
+				});
+			}
+			timer = setTimeout(tick, 2200);
 		}
+	} else if (rotator) {
+		rotator.classList.add('is-done');
 	}
-
-	/* ---- project filter ---- */
-	var filters = document.querySelectorAll('.filter');
-	var projects = document.querySelectorAll('.project');
-	var empty = document.getElementById('projects-empty');
-	filters.forEach(function (btn) {
-		btn.addEventListener('click', function () {
-			var f = btn.getAttribute('data-filter');
-			filters.forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
-			var shown = 0;
-			projects.forEach(function (p) {
-				var tags = (p.getAttribute('data-tags') || '').split(/\s+/);
-				var show = f === 'all' || tags.indexOf(f) !== -1;
-				p.classList.toggle('is-hidden', !show);
-				if (show) { shown++; p.classList.add('is-visible'); }
-			});
-			if (empty) empty.hidden = shown > 0;
-		});
-	});
 })();
