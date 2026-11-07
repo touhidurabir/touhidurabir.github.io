@@ -403,6 +403,7 @@ strong { color: var(--text); font-weight: 600; }
   font-size: clamp(1.05rem, 2.2vw, 1.4rem);
   color: var(--muted);
   letter-spacing: -0.01em;
+  text-wrap: balance;
 }
 .hero-sub {
   margin-top: 1.5rem;
